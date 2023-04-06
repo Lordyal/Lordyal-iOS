@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C270C6C829DE120A00E0CEA5 /* LordyalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */; };
-		C270C6CA29DE120A00E0CEA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6C929DE120A00E0CEA5 /* ContentView.swift */; };
+		C270C6CA29DE120A00E0CEA5 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6C929DE120A00E0CEA5 /* MasterView.swift */; };
 		C270C6CC29DE120B00E0CEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */; };
 		C270C6CF29DE120B00E0CEA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */; };
+		C270C6D729DE124400E0CEA5 /* MainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6D629DE124400E0CEA5 /* MainInterface.swift */; };
+		C270C6DC29DE12FA00E0CEA5 /* RewardsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */; };
+		C270C6DF29DE132A00E0CEA5 /* RewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */; };
+		C270C6E229DE144700E0CEA5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6E129DE144700E0CEA5 /* ImageView.swift */; };
+		C270C6E529DE146000E0CEA5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */; };
+		C270C6E829DE14AD00E0CEA5 /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C270C6C429DE120A00E0CEA5 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordyalApp.swift; sourceTree = "<group>"; };
-		C270C6C929DE120A00E0CEA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C270C6C929DE120A00E0CEA5 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C270C6D629DE124400E0CEA5 /* MainInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterface.swift; sourceTree = "<group>"; };
+		C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTab.swift; sourceTree = "<group>"; };
+		C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardModel.swift; sourceTree = "<group>"; };
+		C270C6E129DE144700E0CEA5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C270C6E529DE146000E0CEA5 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */,
-				C270C6C929DE120A00E0CEA5 /* ContentView.swift */,
+				C270C6E029DE143900E0CEA5 /* Constants */,
+				C270C6DD29DE131E00E0CEA5 /* Models */,
+				C270C6D529DE121D00E0CEA5 /* Views */,
+				C270C6E629DE14A300E0CEA5 /* UI */,
 				C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */,
 				C270C6CD29DE120B00E0CEA5 /* Preview Content */,
 			);
@@ -65,6 +80,48 @@
 				C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C270C6D529DE121D00E0CEA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C270C6C929DE120A00E0CEA5 /* MasterView.swift */,
+				C270C6D629DE124400E0CEA5 /* MainInterface.swift */,
+				C270C6D829DE12E100E0CEA5 /* Tabs */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C270C6D829DE12E100E0CEA5 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C270C6DD29DE131E00E0CEA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C270C6E029DE143900E0CEA5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C270C6E129DE144700E0CEA5 /* ImageView.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C270C6E629DE14A300E0CEA5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +140,9 @@
 			dependencies = (
 			);
 			name = Lordyal;
+			packageProductDependencies = (
+				C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */,
+			);
 			productName = Lordyal;
 			productReference = C270C6C429DE120A00E0CEA5 /* Lordyal.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +171,9 @@
 				Base,
 			);
 			mainGroup = C270C6BB29DE120A00E0CEA5;
+			packageReferences = (
+				C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = C270C6C529DE120A00E0CEA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C270C6CA29DE120A00E0CEA5 /* ContentView.swift in Sources */,
+				C270C6E229DE144700E0CEA5 /* ImageView.swift in Sources */,
+				C270C6CA29DE120A00E0CEA5 /* MasterView.swift in Sources */,
+				C270C6E829DE14AD00E0CEA5 /* RewardCell.swift in Sources */,
+				C270C6D729DE124400E0CEA5 /* MainInterface.swift in Sources */,
+				C270C6DC29DE12FA00E0CEA5 /* RewardsTab.swift in Sources */,
+				C270C6DF29DE132A00E0CEA5 /* RewardModel.swift in Sources */,
 				C270C6C829DE120A00E0CEA5 /* LordyalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C270C6BC29DE120A00E0CEA5 /* Project object */;
 }
