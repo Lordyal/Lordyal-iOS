@@ -7,41 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C220778D29DF19BE001C4EA3 /* LordyalClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220778C29DF19BE001C4EA3 /* LordyalClipApp.swift */; };
-		C220778F29DF19BE001C4EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220778E29DF19BE001C4EA3 /* ContentView.swift */; };
-		C220779129DF19BF001C4EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C220779029DF19BF001C4EA3 /* Assets.xcassets */; };
-		C220779429DF19BF001C4EA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C220779329DF19BF001C4EA3 /* Preview Assets.xcassets */; };
-		C220779929DF19BF001C4EA3 /* LordyalClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = C220778A29DF19BE001C4EA3 /* LordyalClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C270C6C829DE120A00E0CEA5 /* LordyalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */; };
-		C270C6CA29DE120A00E0CEA5 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6C929DE120A00E0CEA5 /* MasterView.swift */; };
-		C270C6CC29DE120B00E0CEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */; };
-		C270C6CF29DE120B00E0CEA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */; };
-		C270C6D729DE124400E0CEA5 /* MainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6D629DE124400E0CEA5 /* MainInterface.swift */; };
-		C270C6DC29DE12FA00E0CEA5 /* RewardsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */; };
-		C270C6DF29DE132A00E0CEA5 /* RewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */; };
-		C270C6E229DE144700E0CEA5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6E129DE144700E0CEA5 /* ImageView.swift */; };
-		C270C6E529DE146000E0CEA5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */; };
-		C270C6E829DE14AD00E0CEA5 /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */; };
+		D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */; };
+		D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */; };
+		D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF829ED8BBD000C4F78 /* ViewController.swift */; };
+		D7394FFC29ED8BBD000C4F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFA29ED8BBD000C4F78 /* Main.storyboard */; };
+		D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */; };
+		D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */; };
+		D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739500E29ED8DBD000C4F78 /* AppDelegate.swift */; };
+		D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739501029ED8DBD000C4F78 /* SceneDelegate.swift */; };
+		D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739501229ED8DBD000C4F78 /* ViewController.swift */; };
+		D739501629ED8DBD000C4F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D739501429ED8DBD000C4F78 /* Main.storyboard */; };
+		D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D739501729ED8DBF000C4F78 /* Assets.xcassets */; };
+		D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */; };
+		D739502029ED8DBF000C4F78 /* LordyalClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = D739500C29ED8DBD000C4F78 /* LordyalClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C220779729DF19BF001C4EA3 /* PBXContainerItemProxy */ = {
+		D739501E29ED8DBF000C4F78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C270C6BC29DE120A00E0CEA5 /* Project object */;
+			containerPortal = D7394FE929ED8BBD000C4F78 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C220778929DF19BE001C4EA3;
+			remoteGlobalIDString = D739500B29ED8DBD000C4F78;
 			remoteInfo = LordyalClip;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C220779A29DF19BF001C4EA3 /* Embed App Clips */ = {
+		D739502429ED8DBF000C4F78 /* Embed App Clips */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				C220779929DF19BF001C4EA3 /* LordyalClip.app in Embed App Clips */,
+				D739502029ED8DBF000C4F78 /* LordyalClip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,157 +47,119 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C220778A29DF19BE001C4EA3 /* LordyalClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LordyalClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C220778C29DF19BE001C4EA3 /* LordyalClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordyalClipApp.swift; sourceTree = "<group>"; };
-		C220778E29DF19BE001C4EA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C220779029DF19BF001C4EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C220779329DF19BF001C4EA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C220779529DF19BF001C4EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C220779629DF19BF001C4EA3 /* LordyalClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LordyalClip.entitlements; sourceTree = "<group>"; };
-		C270C6C429DE120A00E0CEA5 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordyalApp.swift; sourceTree = "<group>"; };
-		C270C6C929DE120A00E0CEA5 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
-		C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C270C6D629DE124400E0CEA5 /* MainInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterface.swift; sourceTree = "<group>"; };
-		C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTab.swift; sourceTree = "<group>"; };
-		C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardModel.swift; sourceTree = "<group>"; };
-		C270C6E129DE144700E0CEA5 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCell.swift; sourceTree = "<group>"; };
+		D7394FF129ED8BBD000C4F78 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7394FF829ED8BBD000C4F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7394FFB29ED8BBD000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D739500029ED8BC2000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D739500229ED8BC2000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D739500C29ED8DBD000C4F78 /* LordyalClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LordyalClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D739500E29ED8DBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D739501029ED8DBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D739501229ED8DBD000C4F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D739501529ED8DBD000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D739501729ED8DBF000C4F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D739501A29ED8DBF000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D739501C29ED8DBF000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D739501D29ED8DBF000C4F78 /* LordyalClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LordyalClip.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C220778729DF19BE001C4EA3 /* Frameworks */ = {
+		D7394FEE29ED8BBD000C4F78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C270C6C129DE120A00E0CEA5 /* Frameworks */ = {
+		D739500929ED8DBD000C4F78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C270C6E529DE146000E0CEA5 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C220778B29DF19BE001C4EA3 /* LordyalClip */ = {
+		D7394FE829ED8BBD000C4F78 = {
 			isa = PBXGroup;
 			children = (
-				C220778C29DF19BE001C4EA3 /* LordyalClipApp.swift */,
-				C220778E29DF19BE001C4EA3 /* ContentView.swift */,
-				C220779029DF19BF001C4EA3 /* Assets.xcassets */,
-				C220779529DF19BF001C4EA3 /* Info.plist */,
-				C220779629DF19BF001C4EA3 /* LordyalClip.entitlements */,
-				C220779229DF19BF001C4EA3 /* Preview Content */,
-			);
-			path = LordyalClip;
-			sourceTree = "<group>";
-		};
-		C220779229DF19BF001C4EA3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				C220779329DF19BF001C4EA3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C270C6BB29DE120A00E0CEA5 = {
-			isa = PBXGroup;
-			children = (
-				C270C6C629DE120A00E0CEA5 /* Lordyal */,
-				C220778B29DF19BE001C4EA3 /* LordyalClip */,
-				C270C6C529DE120A00E0CEA5 /* Products */,
+				D7394FF329ED8BBD000C4F78 /* Lordyal */,
+				D739500D29ED8DBD000C4F78 /* LordyalClip */,
+				D7394FF229ED8BBD000C4F78 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C270C6C529DE120A00E0CEA5 /* Products */ = {
+		D7394FF229ED8BBD000C4F78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C270C6C429DE120A00E0CEA5 /* Lordyal.app */,
-				C220778A29DF19BE001C4EA3 /* LordyalClip.app */,
+				D7394FF129ED8BBD000C4F78 /* Lordyal.app */,
+				D739500C29ED8DBD000C4F78 /* LordyalClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C270C6C629DE120A00E0CEA5 /* Lordyal */ = {
+		D7394FF329ED8BBD000C4F78 /* Lordyal */ = {
 			isa = PBXGroup;
 			children = (
-				C270C6C729DE120A00E0CEA5 /* LordyalApp.swift */,
-				C270C6E029DE143900E0CEA5 /* Constants */,
-				C270C6DD29DE131E00E0CEA5 /* Models */,
-				C270C6D529DE121D00E0CEA5 /* Views */,
-				C270C6E629DE14A300E0CEA5 /* UI */,
-				C270C6CB29DE120B00E0CEA5 /* Assets.xcassets */,
-				C270C6CD29DE120B00E0CEA5 /* Preview Content */,
+				D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */,
+				D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */,
+				D7394FF829ED8BBD000C4F78 /* ViewController.swift */,
+				D7394FFA29ED8BBD000C4F78 /* Main.storyboard */,
+				D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */,
+				D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */,
+				D739500229ED8BC2000C4F78 /* Info.plist */,
 			);
 			path = Lordyal;
 			sourceTree = "<group>";
 		};
-		C270C6CD29DE120B00E0CEA5 /* Preview Content */ = {
+		D739500D29ED8DBD000C4F78 /* LordyalClip */ = {
 			isa = PBXGroup;
 			children = (
-				C270C6CE29DE120B00E0CEA5 /* Preview Assets.xcassets */,
+				D739500E29ED8DBD000C4F78 /* AppDelegate.swift */,
+				D739501029ED8DBD000C4F78 /* SceneDelegate.swift */,
+				D739501229ED8DBD000C4F78 /* ViewController.swift */,
+				D739501429ED8DBD000C4F78 /* Main.storyboard */,
+				D739501729ED8DBF000C4F78 /* Assets.xcassets */,
+				D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */,
+				D739501C29ED8DBF000C4F78 /* Info.plist */,
+				D739501D29ED8DBF000C4F78 /* LordyalClip.entitlements */,
 			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C270C6D529DE121D00E0CEA5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C270C6C929DE120A00E0CEA5 /* MasterView.swift */,
-				C270C6D629DE124400E0CEA5 /* MainInterface.swift */,
-				C270C6D829DE12E100E0CEA5 /* Tabs */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C270C6D829DE12E100E0CEA5 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				C270C6DB29DE12FA00E0CEA5 /* RewardsTab.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		C270C6DD29DE131E00E0CEA5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C270C6DE29DE132A00E0CEA5 /* RewardModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C270C6E029DE143900E0CEA5 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C270C6E129DE144700E0CEA5 /* ImageView.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		C270C6E629DE14A300E0CEA5 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				C270C6E729DE14AD00E0CEA5 /* RewardCell.swift */,
-			);
-			path = UI;
+			path = LordyalClip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C220778929DF19BE001C4EA3 /* LordyalClip */ = {
+		D7394FF029ED8BBD000C4F78 /* Lordyal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C220779D29DF19BF001C4EA3 /* Build configuration list for PBXNativeTarget "LordyalClip" */;
+			buildConfigurationList = D739500529ED8BC2000C4F78 /* Build configuration list for PBXNativeTarget "Lordyal" */;
 			buildPhases = (
-				C220778629DF19BE001C4EA3 /* Sources */,
-				C220778729DF19BE001C4EA3 /* Frameworks */,
-				C220778829DF19BE001C4EA3 /* Resources */,
+				D7394FED29ED8BBD000C4F78 /* Sources */,
+				D7394FEE29ED8BBD000C4F78 /* Frameworks */,
+				D7394FEF29ED8BBD000C4F78 /* Resources */,
+				D739502429ED8DBF000C4F78 /* Embed App Clips */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D739501F29ED8DBF000C4F78 /* PBXTargetDependency */,
+			);
+			name = Lordyal;
+			productName = Lordyal;
+			productReference = D7394FF129ED8BBD000C4F78 /* Lordyal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D739500B29ED8DBD000C4F78 /* LordyalClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D739502129ED8DBF000C4F78 /* Build configuration list for PBXNativeTarget "LordyalClip" */;
+			buildPhases = (
+				D739500829ED8DBD000C4F78 /* Sources */,
+				D739500929ED8DBD000C4F78 /* Frameworks */,
+				D739500A29ED8DBD000C4F78 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -207,50 +167,28 @@
 			);
 			name = LordyalClip;
 			productName = LordyalClip;
-			productReference = C220778A29DF19BE001C4EA3 /* LordyalClip.app */;
+			productReference = D739500C29ED8DBD000C4F78 /* LordyalClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
-		};
-		C270C6C329DE120A00E0CEA5 /* Lordyal */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C270C6D229DE120B00E0CEA5 /* Build configuration list for PBXNativeTarget "Lordyal" */;
-			buildPhases = (
-				C270C6C029DE120A00E0CEA5 /* Sources */,
-				C270C6C129DE120A00E0CEA5 /* Frameworks */,
-				C270C6C229DE120A00E0CEA5 /* Resources */,
-				C220779A29DF19BF001C4EA3 /* Embed App Clips */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C220779829DF19BF001C4EA3 /* PBXTargetDependency */,
-			);
-			name = Lordyal;
-			packageProductDependencies = (
-				C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */,
-			);
-			productName = Lordyal;
-			productReference = C270C6C429DE120A00E0CEA5 /* Lordyal.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C270C6BC29DE120A00E0CEA5 /* Project object */ = {
+		D7394FE929ED8BBD000C4F78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					C220778929DF19BE001C4EA3 = {
-						CreatedOnToolsVersion = 14.2;
+					D7394FF029ED8BBD000C4F78 = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
-					C270C6C329DE120A00E0CEA5 = {
-						CreatedOnToolsVersion = 14.2;
+					D739500B29ED8DBD000C4F78 = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = C270C6BF29DE120A00E0CEA5 /* Build configuration list for PBXProject "Lordyal" */;
+			buildConfigurationList = D7394FEC29ED8BBD000C4F78 /* Build configuration list for PBXProject "Lordyal" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -258,141 +196,108 @@
 				en,
 				Base,
 			);
-			mainGroup = C270C6BB29DE120A00E0CEA5;
-			packageReferences = (
-				C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-			);
-			productRefGroup = C270C6C529DE120A00E0CEA5 /* Products */;
+			mainGroup = D7394FE829ED8BBD000C4F78;
+			productRefGroup = D7394FF229ED8BBD000C4F78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C270C6C329DE120A00E0CEA5 /* Lordyal */,
-				C220778929DF19BE001C4EA3 /* LordyalClip */,
+				D7394FF029ED8BBD000C4F78 /* Lordyal */,
+				D739500B29ED8DBD000C4F78 /* LordyalClip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C220778829DF19BE001C4EA3 /* Resources */ = {
+		D7394FEF29ED8BBD000C4F78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C220779429DF19BF001C4EA3 /* Preview Assets.xcassets in Resources */,
-				C220779129DF19BF001C4EA3 /* Assets.xcassets in Resources */,
+				D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */,
+				D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */,
+				D7394FFC29ED8BBD000C4F78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C270C6C229DE120A00E0CEA5 /* Resources */ = {
+		D739500A29ED8DBD000C4F78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C270C6CF29DE120B00E0CEA5 /* Preview Assets.xcassets in Resources */,
-				C270C6CC29DE120B00E0CEA5 /* Assets.xcassets in Resources */,
+				D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */,
+				D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */,
+				D739501629ED8DBD000C4F78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C220778629DF19BE001C4EA3 /* Sources */ = {
+		D7394FED29ED8BBD000C4F78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C220778F29DF19BE001C4EA3 /* ContentView.swift in Sources */,
-				C220778D29DF19BE001C4EA3 /* LordyalClipApp.swift in Sources */,
+				D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */,
+				D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */,
+				D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C270C6C029DE120A00E0CEA5 /* Sources */ = {
+		D739500829ED8DBD000C4F78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C270C6E229DE144700E0CEA5 /* ImageView.swift in Sources */,
-				C270C6CA29DE120A00E0CEA5 /* MasterView.swift in Sources */,
-				C270C6E829DE14AD00E0CEA5 /* RewardCell.swift in Sources */,
-				C270C6D729DE124400E0CEA5 /* MainInterface.swift in Sources */,
-				C270C6DC29DE12FA00E0CEA5 /* RewardsTab.swift in Sources */,
-				C270C6DF29DE132A00E0CEA5 /* RewardModel.swift in Sources */,
-				C270C6C829DE120A00E0CEA5 /* LordyalApp.swift in Sources */,
+				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
+				D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */,
+				D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C220779829DF19BF001C4EA3 /* PBXTargetDependency */ = {
+		D739501F29ED8DBF000C4F78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C220778929DF19BE001C4EA3 /* LordyalClip */;
-			targetProxy = C220779729DF19BF001C4EA3 /* PBXContainerItemProxy */;
+			target = D739500B29ED8DBD000C4F78 /* LordyalClip */;
+			targetProxy = D739501E29ED8DBF000C4F78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D7394FFA29ED8BBD000C4F78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7394FFB29ED8BBD000C4F78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D739500029ED8BC2000C4F78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D739501429ED8DBD000C4F78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D739501529ED8DBD000C4F78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D739501A29ED8DBF000C4F78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		C220779B29DF19BF001C4EA3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LordyalClip/Preview Content\"";
-				DEVELOPMENT_TEAM = WF6F5UBRBL;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LordyalClip/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sidneysadel.Lordyal.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C220779C29DF19BF001C4EA3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LordyalClip/Preview Content\"";
-				DEVELOPMENT_TEAM = WF6F5UBRBL;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LordyalClip/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sidneysadel.Lordyal.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		C270C6D029DE120B00E0CEA5 /* Debug */ = {
+		D739500329ED8BC2000C4F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -442,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -452,7 +357,7 @@
 			};
 			name = Debug;
 		};
-		C270C6D129DE120B00E0CEA5 /* Release */ = {
+		D739500429ED8BC2000C4F78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -496,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -506,60 +411,141 @@
 			};
 			name = Release;
 		};
-		C270C6D329DE120B00E0CEA5 /* Debug */ = {
+		D739500629ED8BC2000C4F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Lordyal/Preview Content\"";
-				DEVELOPMENT_TEAM = WF6F5UBRBL;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Lordyal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sidneysadel.Lordyal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_lordyal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C270C6D429DE120B00E0CEA5 /* Release */ = {
+		D739500729ED8BC2000C4F78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Lordyal/Preview Content\"";
-				DEVELOPMENT_TEAM = WF6F5UBRBL;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Lordyal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sidneysadel.Lordyal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pro_lordyal;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D739502229ED8DBF000C4F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LordyalClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal.Appclip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_lordyal_appclip;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D739502329ED8DBF000C4F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LordyalClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal.Appclip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_lordyal_appclip;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,53 +555,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C220779D29DF19BF001C4EA3 /* Build configuration list for PBXNativeTarget "LordyalClip" */ = {
+		D7394FEC29ED8BBD000C4F78 /* Build configuration list for PBXProject "Lordyal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C220779B29DF19BF001C4EA3 /* Debug */,
-				C220779C29DF19BF001C4EA3 /* Release */,
+				D739500329ED8BC2000C4F78 /* Debug */,
+				D739500429ED8BC2000C4F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C270C6BF29DE120A00E0CEA5 /* Build configuration list for PBXProject "Lordyal" */ = {
+		D739500529ED8BC2000C4F78 /* Build configuration list for PBXNativeTarget "Lordyal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C270C6D029DE120B00E0CEA5 /* Debug */,
-				C270C6D129DE120B00E0CEA5 /* Release */,
+				D739500629ED8BC2000C4F78 /* Debug */,
+				D739500729ED8BC2000C4F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C270C6D229DE120B00E0CEA5 /* Build configuration list for PBXNativeTarget "Lordyal" */ = {
+		D739502129ED8DBF000C4F78 /* Build configuration list for PBXNativeTarget "LordyalClip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C270C6D329DE120B00E0CEA5 /* Debug */,
-				C270C6D429DE120B00E0CEA5 /* Release */,
+				D739502229ED8DBF000C4F78 /* Debug */,
+				D739502329ED8DBF000C4F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 2.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C270C6E429DE146000E0CEA5 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C270C6E329DE146000E0CEA5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = C270C6BC29DE120A00E0CEA5 /* Project object */;
+	rootObject = D7394FE929ED8BBD000C4F78 /* Project object */;
 }
