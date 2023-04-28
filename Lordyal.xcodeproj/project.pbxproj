@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C97556B29FADB350051EF1F /* RewardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */; };
+		9C97556C29FADB350051EF1F /* RewardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */; };
+		9C97556E29FADB440051EF1F /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556D29FADB440051EF1F /* RedeemViewController.swift */; };
+		9C97556F29FADB440051EF1F /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556D29FADB440051EF1F /* RedeemViewController.swift */; };
+		9C97557129FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */; };
+		9C97557229FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */; };
+		9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
+		9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
+		9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
+		9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
+		9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
+		9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
+		9CB354FD29F973DB00326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB354FC29F973DB00326449 /* SnapKit */; };
+		9CB3550429F975B200326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB3550329F975B200326449 /* SnapKit */; };
 		D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */; };
 		D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */; };
 		D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF829ED8BBD000C4F78 /* ViewController.swift */; };
@@ -47,6 +61,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardInfoViewController.swift; sourceTree = "<group>"; };
+		9C97556D29FADB440051EF1F /* RedeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemViewController.swift; sourceTree = "<group>"; };
+		9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardBarCodeViewController.swift; sourceTree = "<group>"; };
+		9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9C97557729FAE4990051EF1F /* RewardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardListViewController.swift; sourceTree = "<group>"; };
+		9CB354F829F972AB00326449 /* GetAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppViewController.swift; sourceTree = "<group>"; };
 		D7394FF129ED8BBD000C4F78 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB354FD29F973DB00326449 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,18 +99,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB3550429F975B200326449 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C97557329FADBCE0051EF1F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CB354F529F96FD500326449 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9C97557329FADBCE0051EF1F /* Extensions */,
+				9CB354F729F9729900326449 /* ViewControllers */,
+				9CB354F629F96FE600326449 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9CB354F629F96FE600326449 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CB354F729F9729900326449 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CB354F829F972AB00326449 /* GetAppViewController.swift */,
+				9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */,
+				9C97556D29FADB440051EF1F /* RedeemViewController.swift */,
+				9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */,
+				9C97557729FAE4990051EF1F /* RewardListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9CB3550229F975B200326449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7394FE829ED8BBD000C4F78 = {
 			isa = PBXGroup;
 			children = (
+				9CB354F529F96FD500326449 /* Shared */,
 				D7394FF329ED8BBD000C4F78 /* Lordyal */,
 				D739500D29ED8DBD000C4F78 /* LordyalClip */,
 				D7394FF229ED8BBD000C4F78 /* Products */,
+				9CB3550229F975B200326449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,9 +214,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				9CB3550129F9741300326449 /* PBXTargetDependency */,
 				D739501F29ED8DBF000C4F78 /* PBXTargetDependency */,
 			);
 			name = Lordyal;
+			packageProductDependencies = (
+				9CB354FC29F973DB00326449 /* SnapKit */,
+			);
 			productName = Lordyal;
 			productReference = D7394FF129ED8BBD000C4F78 /* Lordyal.app */;
 			productType = "com.apple.product-type.application";
@@ -164,8 +236,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				9CB354FF29F9740900326449 /* PBXTargetDependency */,
 			);
 			name = LordyalClip;
+			packageProductDependencies = (
+				9CB3550329F975B200326449 /* SnapKit */,
+			);
 			productName = LordyalClip;
 			productReference = D739500C29ED8DBD000C4F78 /* LordyalClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
@@ -197,6 +273,9 @@
 				Base,
 			);
 			mainGroup = D7394FE829ED8BBD000C4F78;
+			packageReferences = (
+				9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D7394FF229ED8BBD000C4F78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,9 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C97556B29FADB350051EF1F /* RewardInfoViewController.swift in Sources */,
 				D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */,
+				9C97557129FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */,
+				9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */,
 				D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */,
+				9C97556E29FADB440051EF1F /* RedeemViewController.swift in Sources */,
 				D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */,
+				9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */,
+				9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,15 +330,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C97556C29FADB350051EF1F /* RewardInfoViewController.swift in Sources */,
 				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
+				9C97557229FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */,
+				9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */,
 				D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */,
+				9C97556F29FADB440051EF1F /* RedeemViewController.swift in Sources */,
 				D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */,
+				9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */,
+				9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9CB354FF29F9740900326449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 9CB354FE29F9740900326449 /* SnapKit */;
+		};
+		9CB3550129F9741300326449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 9CB3550029F9741300326449 /* SnapKit */;
+		};
 		D739501F29ED8DBF000C4F78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D739500B29ED8DBD000C4F78 /* LordyalClip */;
@@ -583,6 +682,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CB354FC29F973DB00326449 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9CB354FE29F9740900326449 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9CB3550029F9741300326449 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9CB3550329F975B200326449 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7394FE929ED8BBD000C4F78 /* Project object */;
 }
