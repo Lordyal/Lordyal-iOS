@@ -77,6 +77,8 @@ class RewardInfoViewController: UIViewController {
         button.clipsToBounds = true
         button.titleLabel?.font = .systemFont(ofSize: 40, weight: .bold)
 
+        button.addTarget(self, action: #selector(openRewardList), for: .touchUpInside)
+
         return button
     }()
 
@@ -85,6 +87,16 @@ class RewardInfoViewController: UIViewController {
         addBackground()
         setupViews()
         setupLayout()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     private func addBackground() {
@@ -150,5 +162,11 @@ class RewardInfoViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+    }
+
+    @objc func openRewardList() {
+        let viewController = RewardListViewController()
+        let navigationVC = UINavigationController(rootViewController: viewController)
+        self.navigationController?.present(navigationVC, animated: true)
     }
 }
