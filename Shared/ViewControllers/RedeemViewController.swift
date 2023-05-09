@@ -9,26 +9,38 @@ import Foundation
 import UIKit
 
 class RedeemViewController: UIViewController {
-    let pointsLabel: UILabel = {
+    let readyLabel: UILabel = {
         let label = UILabel()
 
         label.numberOfLines = 1
         label.textAlignment = .center
-        label.textColor = .mediumGreen
+        label.textColor = .lightGreen
         label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.text = "You earned +2 points"
+        label.text = "Reward is ready to claim"
 
         return label
     }()
 
-    let totalPointsLabel: UILabel = {
+    let rewardDescriptionLabel: UILabel = {
+        let label = UILabel()
+
+        label.numberOfLines = 2
+        label.textAlignment = .center
+        label.textColor = .lightGreen
+        label.font = .systemFont(ofSize: 36, weight: .black)
+        label.text = "50% Off for Medium Size"
+
+        return label
+    }()
+
+    let storeNameLabel: UILabel = {
         let label = UILabel()
 
         label.numberOfLines = 1
         label.textAlignment = .center
-        label.textColor = .mediumGreen
-        label.font = .systemFont(ofSize: 64, weight: .bold)
-        label.text = "5 of 6"
+        label.textColor = .lightGreen
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.text = "Mr Pijazz"
 
         return label
     }()
@@ -46,37 +58,44 @@ class RedeemViewController: UIViewController {
 
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.textColor = .lightGreen
+        label.textColor = .mediumGreen
         label.font = .systemFont(ofSize: 20, weight: .semibold)
-        label.text = "Come back 1 more time(s) to get your reward"
+        label.text = "Redeem reward now?"
 
         return label
     }()
 
-    lazy var openAppStoreButton: UIButton = {
+    lazy var useNowButton: UIButton = {
         let button = UIButton(frame: .zero)
-        button.setTitle("GET LORDYAL", for: .normal)
+        button.setTitle("Redeem", for: .normal)
         button.backgroundColor = .boldGreen
         button.setTitleColor(
             .lightGreen,
             for: .normal
         )
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 32
         button.clipsToBounds = true
-        button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        button.addTarget(self, action: #selector(tapUseNow), for: .touchUpInside)
 
         return button
     }()
 
-    lazy var openRewardListButton: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-        button.tintColor = .black
-        button.layer.cornerRadius = 16
-        button.clipsToBounds = true
-        button.titleLabel?.font = .systemFont(ofSize: 40, weight: .bold)
-
+    lazy var useLaterButton: UseLaterButton = {
+        let button = UseLaterButton(frame: .zero)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapUseLater))
+        button.addGestureRecognizer(tapGesture)
         return button
+    }()
+
+    let buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+
+        return stackView
     }()
 
     override func viewDidLoad() {
@@ -92,12 +111,13 @@ class RedeemViewController: UIViewController {
         let y: CGFloat = UIScreen.main.bounds.size.height
         let x: CGFloat = UIScreen.main.bounds.size.width
         let height: CGFloat = y / 2
-        let startHeight = height + 100
+        let startHeight = height - 100
 
-        path.move(to: CGPoint(x: 0, y: startHeight)) // bottom left
+        path.move(to: .zero)
+        path.addLine(to: CGPoint(x: 0, y: startHeight))
         path.addQuadCurve(to: CGPoint(x: x, y: startHeight), controlPoint: CGPoint(x: x / 2, y: height))
-        path.addLine(to: CGPoint(x: x, y: y)) // bottom right
-        path.addLine(to: CGPoint(x: 0, y: y))
+        path.addLine(to: CGPoint(x: x, y: 0))
+        path.addLine(to: .zero)
         path.close() // close the path from bottom right to bottom left
 
         let shapeLayer = CAShapeLayer()
@@ -109,27 +129,36 @@ class RedeemViewController: UIViewController {
 
     private func setupViews() {
         view.backgroundColor = .lightGreen
-        view.addSubview(pointsLabel)
-        view.addSubview(totalPointsLabel)
+        view.addSubview(readyLabel)
+        view.addSubview(rewardDescriptionLabel)
+        view.addSubview(storeNameLabel)
         view.addSubview(productImageView)
         view.addSubview(noteLabel)
-        view.addSubview(openAppStoreButton)
-        view.addSubview(openRewardListButton)
+
+        view.addSubview(buttonStackView)
+        buttonStackView.addArrangedSubview(useLaterButton)
+        buttonStackView.addArrangedSubview(useNowButton)
     }
 
     private func setupLayout() {
-        pointsLabel.snp.makeConstraints { make in
+        readyLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(74)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
 
-        totalPointsLabel.snp.makeConstraints { make in
+        rewardDescriptionLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalTo(pointsLabel.snp.bottom)
+            make.top.equalTo(readyLabel.snp.bottom).offset(16)
+        }
+
+        storeNameLabel.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(rewardDescriptionLabel.snp.bottom).offset(8)
         }
 
         productImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(16)
             make.width.height.equalTo(300)
         }
 
@@ -138,16 +167,18 @@ class RedeemViewController: UIViewController {
             make.top.equalTo(productImageView.snp.bottom).offset(16)
         }
 
-        openAppStoreButton.snp.makeConstraints { make in
+        buttonStackView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(40)
-            make.height.equalTo(64)
-            make.bottom.equalTo(openRewardListButton.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            make.height.equalTo(63)
         }
+    }
 
-        openRewardListButton.snp.makeConstraints { make in
-            make.width.height.equalTo(60)
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-        }
+    @objc private func tapUseNow() {
+
+    }
+
+    @objc private func tapUseLater() {
+
     }
 }

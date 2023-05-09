@@ -156,4 +156,8 @@ class RewardItemTableViewCell: UITableViewCell {
             progressLabel.text = "\(value) of \(total)"
         }
     }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {}
+
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
 }

@@ -17,6 +17,8 @@
 		9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
 		9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
 		9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
+		9CA11FB22A07661A00E3E961 /* UseLaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */; };
+		9CA11FB32A07661A00E3E961 /* UseLaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */; };
 		9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
 		9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
 		9CB354FD29F973DB00326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB354FC29F973DB00326449 /* SnapKit */; };
@@ -25,8 +27,6 @@
 		9CEE06E329FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */; };
 		D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */; };
 		D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */; };
-		D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF829ED8BBD000C4F78 /* ViewController.swift */; };
-		D7394FFC29ED8BBD000C4F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFA29ED8BBD000C4F78 /* Main.storyboard */; };
 		D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */; };
 		D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */; };
 		D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739500E29ED8DBD000C4F78 /* AppDelegate.swift */; };
@@ -68,13 +68,12 @@
 		9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardBarCodeViewController.swift; sourceTree = "<group>"; };
 		9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9C97557729FAE4990051EF1F /* RewardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardListViewController.swift; sourceTree = "<group>"; };
+		9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseLaterButton.swift; sourceTree = "<group>"; };
 		9CB354F829F972AB00326449 /* GetAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppViewController.swift; sourceTree = "<group>"; };
 		9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardItemTableViewCell.swift; sourceTree = "<group>"; };
 		D7394FF129ED8BBD000C4F78 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7394FF829ED8BBD000C4F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7394FFB29ED8BBD000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D739500029ED8BC2000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D739500229ED8BC2000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +142,7 @@
 				9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */,
 				9C97557729FAE4990051EF1F /* RewardListViewController.swift */,
 				9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */,
+				9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,8 +179,6 @@
 			children = (
 				D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */,
 				D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */,
-				D7394FF829ED8BBD000C4F78 /* ViewController.swift */,
-				D7394FFA29ED8BBD000C4F78 /* Main.storyboard */,
 				D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */,
 				D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */,
 				D739500229ED8BC2000C4F78 /* Info.plist */,
@@ -297,7 +295,6 @@
 			files = (
 				D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */,
 				D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */,
-				D7394FFC29ED8BBD000C4F78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,12 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C97556B29FADB350051EF1F /* RewardInfoViewController.swift in Sources */,
-				D7394FF929ED8BBD000C4F78 /* ViewController.swift in Sources */,
 				9C97557129FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */,
 				9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */,
 				D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */,
 				9C97556E29FADB440051EF1F /* RedeemViewController.swift in Sources */,
 				D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */,
+				9CA11FB22A07661A00E3E961 /* UseLaterButton.swift in Sources */,
 				9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */,
 				9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 				9CEE06E229FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */,
@@ -341,6 +338,7 @@
 				9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */,
 				D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */,
 				9C97556F29FADB440051EF1F /* RedeemViewController.swift in Sources */,
+				9CA11FB32A07661A00E3E961 /* UseLaterButton.swift in Sources */,
 				D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */,
 				9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */,
 				9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
@@ -367,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D7394FFA29ED8BBD000C4F78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7394FFB29ED8BBD000C4F78 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -532,7 +522,7 @@
 				INFOPLIST_FILE = Lordyal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -566,7 +556,7 @@
 				INFOPLIST_FILE = Lordyal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -602,7 +592,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -638,7 +628,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Lordyal;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

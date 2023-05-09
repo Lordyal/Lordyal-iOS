@@ -26,6 +26,7 @@ class RewardListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
 
         tableView.register(RewardItemTableViewCell.self, forCellReuseIdentifier: RewardItemTableViewCell.identifier)
 
