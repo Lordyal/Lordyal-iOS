@@ -7,32 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C97556B29FADB350051EF1F /* RewardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */; };
-		9C97556C29FADB350051EF1F /* RewardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */; };
-		9C97556E29FADB440051EF1F /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556D29FADB440051EF1F /* RedeemViewController.swift */; };
-		9C97556F29FADB440051EF1F /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97556D29FADB440051EF1F /* RedeemViewController.swift */; };
-		9C97557129FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */; };
-		9C97557229FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */; };
+		9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */; };
+		9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */; };
+		9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */; };
+		9C28BFD82A331A37000E5C34 /* UserProfileInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */; };
+		9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D02A323AC1001407ED /* UserProfileInputView.swift */; };
+		9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D02A323AC1001407ED /* UserProfileInputView.swift */; };
+		9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D32A323C4E001407ED /* GenderSelectionView.swift */; };
+		9C7369D52A323C4E001407ED /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D32A323C4E001407ED /* GenderSelectionView.swift */; };
 		9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
 		9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
-		9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
-		9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557729FAE4990051EF1F /* RewardListViewController.swift */; };
-		9CA11FB22A07661A00E3E961 /* UseLaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */; };
-		9CA11FB32A07661A00E3E961 /* UseLaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */; };
-		9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
-		9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB354F829F972AB00326449 /* GetAppViewController.swift */; };
 		9CB354FD29F973DB00326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB354FC29F973DB00326449 /* SnapKit */; };
 		9CB3550429F975B200326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB3550329F975B200326449 /* SnapKit */; };
-		9CEE06E229FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */; };
-		9CEE06E329FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */; };
-		D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */; };
-		D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */; };
+		9CBFDFBE2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */; };
+		9CBFDFBF2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */; };
+		9CC67C7F2A338DBC0091A3D8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC67C7E2A338DBC0091A3D8 /* DatePickerView.swift */; };
+		9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC67C7E2A338DBC0091A3D8 /* DatePickerView.swift */; };
+		9CCE7D132A2503570037209E /* LordyalClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D122A2503570037209E /* LordyalClipApp.swift */; };
+		9CCE7D152A2504130037209E /* LordyalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D142A2504130037209E /* LordyalApp.swift */; };
+		9CCE7D192A2505070037209E /* GetAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D182A2505070037209E /* GetAppView.swift */; };
+		9CCE7D1B2A250A1B0037209E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE7D1A2A250A1B0037209E /* Colors.xcassets */; };
+		9CCE7D1D2A250AF60037209E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D1C2A250AF60037209E /* Color+Extension.swift */; };
+		9CCE7D1E2A2511320037209E /* GetAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D182A2505070037209E /* GetAppView.swift */; };
+		9CCE7D1F2A2511430037209E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE7D1A2A250A1B0037209E /* Colors.xcassets */; };
+		9CCE7D202A2511460037209E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE7D1C2A250AF60037209E /* Color+Extension.swift */; };
+		9CDCE63D2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE63C2A27A35E004055D8 /* ScanBarCodeView.swift */; };
+		9CDCE63E2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE63C2A27A35E004055D8 /* ScanBarCodeView.swift */; };
+		9CDCE6402A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE63F2A27A88D004055D8 /* ApplyingRewardsView.swift */; };
+		9CDCE6412A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE63F2A27A88D004055D8 /* ApplyingRewardsView.swift */; };
+		9CDCE6432A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE6422A27A94E004055D8 /* ApplyingRewardItemView.swift */; };
+		9CDCE6442A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCE6422A27A94E004055D8 /* ApplyingRewardItemView.swift */; };
+		9CDCE6472A27AD40004055D8 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDCE6462A27AD40004055D8 /* Icons.xcassets */; };
+		9CDCE6482A27AD40004055D8 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDCE6462A27AD40004055D8 /* Icons.xcassets */; };
 		D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */; };
 		D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */; };
-		D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739500E29ED8DBD000C4F78 /* AppDelegate.swift */; };
-		D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739501029ED8DBD000C4F78 /* SceneDelegate.swift */; };
 		D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739501229ED8DBD000C4F78 /* ViewController.swift */; };
-		D739501629ED8DBD000C4F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D739501429ED8DBD000C4F78 /* Main.storyboard */; };
 		D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D739501729ED8DBF000C4F78 /* Assets.xcassets */; };
 		D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */; };
 		D739502029ED8DBF000C4F78 /* LordyalClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = D739500C29ED8DBD000C4F78 /* LordyalClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,25 +72,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardInfoViewController.swift; sourceTree = "<group>"; };
-		9C97556D29FADB440051EF1F /* RedeemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemViewController.swift; sourceTree = "<group>"; };
-		9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardBarCodeViewController.swift; sourceTree = "<group>"; };
+		9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputViewModel.swift; sourceTree = "<group>"; };
+		9C7369D02A323AC1001407ED /* UserProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputView.swift; sourceTree = "<group>"; };
+		9C7369D32A323C4E001407ED /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
 		9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		9C97557729FAE4990051EF1F /* RewardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardListViewController.swift; sourceTree = "<group>"; };
-		9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseLaterButton.swift; sourceTree = "<group>"; };
-		9CB354F829F972AB00326449 /* GetAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppViewController.swift; sourceTree = "<group>"; };
-		9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardItemTableViewCell.swift; sourceTree = "<group>"; };
+		9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemRewardView.swift; sourceTree = "<group>"; };
+		9CC67C7E2A338DBC0091A3D8 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		9CCE7D122A2503570037209E /* LordyalClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordyalClipApp.swift; sourceTree = "<group>"; };
+		9CCE7D142A2504130037209E /* LordyalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordyalApp.swift; sourceTree = "<group>"; };
+		9CCE7D182A2505070037209E /* GetAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppView.swift; sourceTree = "<group>"; };
+		9CCE7D1A2A250A1B0037209E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9CCE7D1C2A250AF60037209E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		9CDCE63C2A27A35E004055D8 /* ScanBarCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBarCodeView.swift; sourceTree = "<group>"; };
+		9CDCE63F2A27A88D004055D8 /* ApplyingRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyingRewardsView.swift; sourceTree = "<group>"; };
+		9CDCE6422A27A94E004055D8 /* ApplyingRewardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyingRewardItemView.swift; sourceTree = "<group>"; };
+		9CDCE6462A27AD40004055D8 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		D7394FF129ED8BBD000C4F78 /* Lordyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lordyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D739500029ED8BC2000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D739500229ED8BC2000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D739500C29ED8DBD000C4F78 /* LordyalClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LordyalClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D739500E29ED8DBD000C4F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D739501029ED8DBD000C4F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D739501229ED8DBD000C4F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D739501529ED8DBD000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D739501729ED8DBF000C4F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D739501A29ED8DBF000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D739501C29ED8DBF000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB354FD29F973DB00326449 /* SnapKit in Frameworks */,
+				9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB3550429F975B200326449 /* SnapKit in Frameworks */,
+				9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */,
+				9CCE7D1C2A250AF60037209E /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,9 +133,12 @@
 		9CB354F529F96FD500326449 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9CDCE6452A27A9EA004055D8 /* ViewModels */,
+				9CCE7D172A2504F00037209E /* Views */,
 				9C97557329FADBCE0051EF1F /* Extensions */,
-				9CB354F729F9729900326449 /* ViewControllers */,
 				9CB354F629F96FE600326449 /* Models */,
+				9CCE7D1A2A250A1B0037209E /* Colors.xcassets */,
+				9CDCE6462A27AD40004055D8 /* Icons.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -133,25 +150,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9CB354F729F9729900326449 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9CB354F829F972AB00326449 /* GetAppViewController.swift */,
-				9C97556A29FADB350051EF1F /* RewardInfoViewController.swift */,
-				9C97556D29FADB440051EF1F /* RedeemViewController.swift */,
-				9C97557029FADB5A0051EF1F /* RewardBarCodeViewController.swift */,
-				9C97557729FAE4990051EF1F /* RewardListViewController.swift */,
-				9CEE06E129FC1DF100B7029D /* RewardItemTableViewCell.swift */,
-				9CA11FB12A07661A00E3E961 /* UseLaterButton.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		9CB3550229F975B200326449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CCE7D172A2504F00037209E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CCE7D182A2505070037209E /* GetAppView.swift */,
+				9CDCE63C2A27A35E004055D8 /* ScanBarCodeView.swift */,
+				9CDCE63F2A27A88D004055D8 /* ApplyingRewardsView.swift */,
+				9CDCE6422A27A94E004055D8 /* ApplyingRewardItemView.swift */,
+				9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */,
+				9C7369D02A323AC1001407ED /* UserProfileInputView.swift */,
+				9C7369D32A323C4E001407ED /* GenderSelectionView.swift */,
+				9CC67C7E2A338DBC0091A3D8 /* DatePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CDCE6452A27A9EA004055D8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D7394FE829ED8BBD000C4F78 = {
@@ -177,11 +203,10 @@
 		D7394FF329ED8BBD000C4F78 /* Lordyal */ = {
 			isa = PBXGroup;
 			children = (
-				D7394FF429ED8BBD000C4F78 /* AppDelegate.swift */,
-				D7394FF629ED8BBD000C4F78 /* SceneDelegate.swift */,
 				D7394FFD29ED8BC2000C4F78 /* Assets.xcassets */,
 				D7394FFF29ED8BC2000C4F78 /* LaunchScreen.storyboard */,
 				D739500229ED8BC2000C4F78 /* Info.plist */,
+				9CCE7D142A2504130037209E /* LordyalApp.swift */,
 			);
 			path = Lordyal;
 			sourceTree = "<group>";
@@ -189,14 +214,12 @@
 		D739500D29ED8DBD000C4F78 /* LordyalClip */ = {
 			isa = PBXGroup;
 			children = (
-				D739500E29ED8DBD000C4F78 /* AppDelegate.swift */,
-				D739501029ED8DBD000C4F78 /* SceneDelegate.swift */,
 				D739501229ED8DBD000C4F78 /* ViewController.swift */,
-				D739501429ED8DBD000C4F78 /* Main.storyboard */,
 				D739501729ED8DBF000C4F78 /* Assets.xcassets */,
 				D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */,
 				D739501C29ED8DBF000C4F78 /* Info.plist */,
 				D739501D29ED8DBF000C4F78 /* LordyalClip.entitlements */,
+				9CCE7D122A2503570037209E /* LordyalClipApp.swift */,
 			);
 			path = LordyalClip;
 			sourceTree = "<group>";
@@ -222,6 +245,7 @@
 			name = Lordyal;
 			packageProductDependencies = (
 				9CB354FC29F973DB00326449 /* SnapKit */,
+				9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */,
 			);
 			productName = Lordyal;
 			productReference = D7394FF129ED8BBD000C4F78 /* Lordyal.app */;
@@ -243,6 +267,7 @@
 			name = LordyalClip;
 			packageProductDependencies = (
 				9CB3550329F975B200326449 /* SnapKit */,
+				9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */,
 			);
 			productName = LordyalClip;
 			productReference = D739500C29ED8DBD000C4F78 /* LordyalClip.app */;
@@ -277,6 +302,7 @@
 			mainGroup = D7394FE829ED8BBD000C4F78;
 			packageReferences = (
 				9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 			);
 			productRefGroup = D7394FF229ED8BBD000C4F78 /* Products */;
 			projectDirPath = "";
@@ -293,7 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCE7D1B2A250A1B0037209E /* Colors.xcassets in Resources */,
 				D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */,
+				9CDCE6472A27AD40004055D8 /* Icons.xcassets in Resources */,
 				D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCE7D1F2A2511430037209E /* Colors.xcassets in Resources */,
 				D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */,
+				9CDCE6482A27AD40004055D8 /* Icons.xcassets in Resources */,
 				D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */,
-				D739501629ED8DBD000C4F78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,16 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C97556B29FADB350051EF1F /* RewardInfoViewController.swift in Sources */,
-				9C97557129FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */,
-				9CB354F929F972AB00326449 /* GetAppViewController.swift in Sources */,
-				D7394FF529ED8BBD000C4F78 /* AppDelegate.swift in Sources */,
-				9C97556E29FADB440051EF1F /* RedeemViewController.swift in Sources */,
-				D7394FF729ED8BBD000C4F78 /* SceneDelegate.swift in Sources */,
-				9CA11FB22A07661A00E3E961 /* UseLaterButton.swift in Sources */,
-				9C97557829FAE4990051EF1F /* RewardListViewController.swift in Sources */,
+				9CCE7D152A2504130037209E /* LordyalApp.swift in Sources */,
+				9CCE7D192A2505070037209E /* GetAppView.swift in Sources */,
+				9CDCE63D2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
+				9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */,
+				9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */,
+				9CBFDFBE2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
+				9CC67C7F2A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
 				9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
-				9CEE06E229FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */,
+				9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */,
+				9CDCE6432A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
+				9CCE7D1D2A250AF60037209E /* Color+Extension.swift in Sources */,
+				9CDCE6402A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,17 +363,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C97556C29FADB350051EF1F /* RewardInfoViewController.swift in Sources */,
+				9CDCE63E2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
 				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
-				9C97557229FADB5A0051EF1F /* RewardBarCodeViewController.swift in Sources */,
-				9CB354FA29F9739800326449 /* GetAppViewController.swift in Sources */,
-				D739500F29ED8DBD000C4F78 /* AppDelegate.swift in Sources */,
-				9C97556F29FADB440051EF1F /* RedeemViewController.swift in Sources */,
-				9CA11FB32A07661A00E3E961 /* UseLaterButton.swift in Sources */,
-				D739501129ED8DBD000C4F78 /* SceneDelegate.swift in Sources */,
-				9C97557929FAE4990051EF1F /* RewardListViewController.swift in Sources */,
+				9C28BFD82A331A37000E5C34 /* UserProfileInputViewModel.swift in Sources */,
+				9CDCE6442A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
+				9CCE7D1E2A2511320037209E /* GetAppView.swift in Sources */,
+				9C7369D52A323C4E001407ED /* GenderSelectionView.swift in Sources */,
+				9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */,
+				9CDCE6412A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
+				9CCE7D202A2511460037209E /* Color+Extension.swift in Sources */,
+				9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
+				9CCE7D132A2503570037209E /* LordyalClipApp.swift in Sources */,
+				9CBFDFBF2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
 				9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
-				9CEE06E329FC1DF100B7029D /* RewardItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,14 +404,6 @@
 				D739500029ED8BC2000C4F78 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D739501429ED8DBD000C4F78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D739501529ED8DBD000C4F78 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */ = {
@@ -523,9 +548,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,9 +582,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,8 +618,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -629,8 +654,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -680,6 +705,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -691,6 +724,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+		9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
 		9CB354FC29F973DB00326449 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "phonenumberkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marmelroy/PhoneNumberKit",
+      "state" : {
+        "revision" : "f901c4e6191cfc3b5cb73eee1d66217fe9f3eaca",
+        "version" : "3.6.0"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",
