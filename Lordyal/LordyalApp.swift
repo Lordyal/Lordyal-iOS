@@ -11,7 +11,7 @@ import SwiftUI
 struct LordyalApp: App {
     var body: some Scene {
         WindowGroup {
-            UserProfileInputView(viewModel: UserProfileInputViewModel())
+            ApplyingRewardsView()
         }
     }
 }

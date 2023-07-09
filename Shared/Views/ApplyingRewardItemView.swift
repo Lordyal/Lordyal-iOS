@@ -11,9 +11,14 @@ struct ApplyingRewardItemView: View {
     let model: ApplyingRewardItemModel
     var body: some View {
         ZStack {
-            Color.orange
-                .cornerRadius(30)
-                .shadow(radius: 5)
+            GeometryReader { proxy in
+                Image("sample")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+                    .cornerRadius(30.0)
+                    .clipped()
+            }
             LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
                 .cornerRadius(30)
             if model.selected {
@@ -26,10 +31,21 @@ struct ApplyingRewardItemView: View {
                         Image("checked")
                     }
                     Spacer()
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 50, height: 24)
-                        .cornerRadius(25)
+                    HStack {
+                        Image(model.isClaimable ? "claim" : "unclaim")
+                            .resizable()
+                            .frame(width: 18, height: 18)
+                        Text("\(model.collectedPoints)/\(model.totalPoint)")
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundColor(model.isClaimable ? .white : .boldGreen)
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 8)
+                    .background {
+                        Rectangle()
+                            .foregroundColor(model.isClaimable ? .yellow : .white)
+                            .cornerRadius(25)
+                    }
                 }
                 Spacer()
                 Text(model.title)
@@ -54,18 +70,14 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
                 totalPoint: 6
             )
         )
-    }
-}
-
-struct ApplyingRewardItemModel: Identifiable {
-    let id = UUID()
-    var selected: Bool
-    var title: String
-    var imageURL: String
-    var collectedPoints: Int
-    var totalPoint: Int
-
-    var selectedIconName: String {
-        selected ? "checked" : "unchecked"
+        ApplyingRewardItemView(
+            model: ApplyingRewardItemModel(
+                selected: true,
+                title: "Free normal size Spaghetti",
+                imageURL: "",
+                collectedPoints: 6,
+                totalPoint: 6
+            )
+        )
     }
 }

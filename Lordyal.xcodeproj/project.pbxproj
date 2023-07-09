@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CD5592A52BC1800D66E6C /* APIService.swift */; };
 		9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */; };
 		9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */; };
 		9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */; };
 		9C28BFD82A331A37000E5C34 /* UserProfileInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */; };
+		9C3CD55A2A52BC1800D66E6C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CD5592A52BC1800D66E6C /* APIService.swift */; };
 		9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D02A323AC1001407ED /* UserProfileInputView.swift */; };
 		9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D02A323AC1001407ED /* UserProfileInputView.swift */; };
 		9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D32A323C4E001407ED /* GenderSelectionView.swift */; };
 		9C7369D52A323C4E001407ED /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7369D32A323C4E001407ED /* GenderSelectionView.swift */; };
+		9C86D69C2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */; };
+		9C86D69D2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */; };
 		9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
 		9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */; };
 		9CB354FD29F973DB00326449 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB354FC29F973DB00326449 /* SnapKit */; };
@@ -73,8 +77,10 @@
 
 /* Begin PBXFileReference section */
 		9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputViewModel.swift; sourceTree = "<group>"; };
+		9C3CD5592A52BC1800D66E6C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9C7369D02A323AC1001407ED /* UserProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputView.swift; sourceTree = "<group>"; };
 		9C7369D32A323C4E001407ED /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
+		9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyingRewardsViewModel.swift; sourceTree = "<group>"; };
 		9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemRewardView.swift; sourceTree = "<group>"; };
 		9CC67C7E2A338DBC0091A3D8 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C3CD5582A52838000D66E6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C3CD5592A52BC1800D66E6C /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9C97557329FADBCE0051EF1F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +147,7 @@
 		9CB354F529F96FD500326449 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9C3CD5582A52838000D66E6C /* Services */,
 				9CDCE6452A27A9EA004055D8 /* ViewModels */,
 				9CCE7D172A2504F00037209E /* Views */,
 				9C97557329FADBCE0051EF1F /* Extensions */,
@@ -176,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */,
+				9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -350,7 +366,9 @@
 				9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */,
 				9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */,
 				9CBFDFBE2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
+				9C86D69C2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */,
 				9CC67C7F2A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
+				9C3CD55A2A52BC1800D66E6C /* APIService.swift in Sources */,
 				9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 				9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */,
 				9CDCE6432A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
@@ -364,12 +382,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDCE63E2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
+				9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */,
 				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
 				9C28BFD82A331A37000E5C34 /* UserProfileInputViewModel.swift in Sources */,
 				9CDCE6442A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
 				9CCE7D1E2A2511320037209E /* GetAppView.swift in Sources */,
 				9C7369D52A323C4E001407ED /* GenderSelectionView.swift in Sources */,
 				9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */,
+				9C86D69D2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */,
 				9CDCE6412A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 				9CCE7D202A2511460037209E /* Color+Extension.swift in Sources */,
 				9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
@@ -538,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -550,7 +570,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +579,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_lordyal;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pro_lordyal;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -584,7 +604,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
