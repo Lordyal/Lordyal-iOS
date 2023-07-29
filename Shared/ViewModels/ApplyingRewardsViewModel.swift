@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class ApplyingRewardsViewModel: ObservableObject {
-    @Published var items: [ApplyingRewardItemModel] = ApplyingRewardsViewModel.data
+    @Published var items: [ApplyingRewardItemModel] = []
     @Published var redeemEnabled: Bool = false
     var selectedItem: ApplyingRewardItemModel? {
         items.first { $0.selected }
@@ -31,12 +31,15 @@ class ApplyingRewardsViewModel: ObservableObject {
             do {
                 let url = URL.buildURL(
                     path: APIPath.availableRewards,
-                    queries: ["user_id":"2", "merchant_id":"44"]
+                    queries: ["user_id": "2", "merchant_id": "44"]
                 )
                 let data: AvailableRewardDataModel = try await APIService.shared.get(
                     url
                 )
-                print(data)
+
+                await MainActor.run {
+                    items = data.data.map { $0.convertToItemModel() }
+                }
             } catch {
                 print(error.localizedDescription)
             }
@@ -44,45 +47,8 @@ class ApplyingRewardsViewModel: ObservableObject {
     }
 }
 
-// MARK: For testing purpose
-extension ApplyingRewardsViewModel {
-    static let data: [ApplyingRewardItemModel] = [
-        ApplyingRewardItemModel(
-            title: "Free normal size Spaghetti",
-            imageURL: "",
-            collectedPoints: 6,
-            totalPoint: 6
-        ),
-        ApplyingRewardItemModel(
-            title: "Free normal size Spaghetti",
-            imageURL: "",
-            collectedPoints: 4,
-            totalPoint: 6
-        ),
-        ApplyingRewardItemModel(
-            title: "Free normal size Spaghetti",
-            imageURL: "",
-            collectedPoints: 4,
-            totalPoint: 6
-        ),
-        ApplyingRewardItemModel(
-            title: "Free normal size Spaghetti",
-            imageURL: "",
-            collectedPoints: 4,
-            totalPoint: 6
-        ),
-        ApplyingRewardItemModel(
-            title: "Free normal size Spaghetti",
-            imageURL: "",
-            collectedPoints: 4,
-            totalPoint: 6
-        ),
-
-    ]
-}
-
 struct ApplyingRewardItemModel: Identifiable {
-    let rewardID = UUID()
+    let rewardID: Int
     var selected: Bool = false
     var title: String
     var imageURL: String
@@ -91,7 +57,7 @@ struct ApplyingRewardItemModel: Identifiable {
     var storeName: String = "Taperk's Kitchen"
 
     var id: String {
-        rewardID.uuidString + "\(selected)"
+        "\(rewardID)\(selected)"
     }
 
     var selectedIconName: String {
@@ -107,7 +73,8 @@ struct ApplyingRewardItemModel: Identifiable {
             points: collectedPoints,
             totalPoints: totalPoint,
             storeName: storeName,
-            rewardDescription: title
+            rewardDescription: title,
+            imageURL: imageURL
         )
     }
 
@@ -168,5 +135,16 @@ struct AvailableRewardItemDataModel: Codable {
         self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL)
         self.redeemPoints = try container.decodeIfPresent(Int.self, forKey: .redeemPoints) ?? 0
         self.pointsAccumulated = try container.decodeIfPresent(Int.self, forKey: .pointsAccumulated) ?? 0
+    }
+
+    func convertToItemModel() -> ApplyingRewardItemModel {
+        ApplyingRewardItemModel(
+            rewardID: id,
+            title: description,
+            imageURL: imageURL ?? "",
+            collectedPoints: pointsAccumulated,
+            totalPoint: redeemPoints,
+            storeName: name
+        )
     }
 }

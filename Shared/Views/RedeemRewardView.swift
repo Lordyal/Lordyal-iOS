@@ -40,8 +40,7 @@ struct RedeemRewardView: View {
 
                         ZStack {
                             let width = proxy.size.width - 80
-                            Image("sample")
-                                .resizable()
+                            AsyncImage(url: URL(string: model.imageURL))
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: width, height: width)
                                 .cornerRadius(48)
@@ -189,6 +188,7 @@ struct RewardModel {
     var totalPoints: Int
     var storeName: String
     var rewardDescription: String
+    var imageURL: String = ""
 
     var isClaimable: Bool {
         points == totalPoints

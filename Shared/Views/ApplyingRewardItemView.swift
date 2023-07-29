@@ -12,8 +12,7 @@ struct ApplyingRewardItemView: View {
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                Image("sample")
-                    .resizable()
+                AsyncImage(url: URL(string: model.imageURL))
                     .aspectRatio(contentMode: .fill)
                     .frame(width: proxy.size.width, height: proxy.size.height)
                     .cornerRadius(30.0)
@@ -63,6 +62,7 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
     static var previews: some View {
         ApplyingRewardItemView(
             model: ApplyingRewardItemModel(
+                rewardID: 1,
                 selected: true,
                 title: "Free normal size Spaghetti",
                 imageURL: "",
@@ -72,6 +72,7 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
         )
         ApplyingRewardItemView(
             model: ApplyingRewardItemModel(
+                rewardID: 2,
                 selected: true,
                 title: "Free normal size Spaghetti",
                 imageURL: "",

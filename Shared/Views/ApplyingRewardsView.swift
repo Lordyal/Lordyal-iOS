@@ -29,7 +29,6 @@ struct ApplyingRewardsView: View {
                                 ApplyingRewardItemView(model: item)
                                     .frame(height: 210)
                                     .onTapGesture {
-                                        viewModel.getList()
                                         viewModel.selectItem(item)
                                     }
                             }
@@ -87,6 +86,9 @@ struct ApplyingRewardsView: View {
                     .padding()
                 }
             }
+        }
+        .onAppear {
+            viewModel.getList()
         }
     }
 }

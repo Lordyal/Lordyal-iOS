@@ -69,4 +69,5 @@ enum APIVersion {
 
 enum APIPath {
     static let availableRewards = "/users/rewards/available"
+    static let rewardAccumulation = "/users/rewards/accumulation"
 }
