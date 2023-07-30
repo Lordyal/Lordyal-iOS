@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GetAppView: View {
+    var test = "test"
     var body: some View {
         ZStack {
             Color.lightGreen.ignoresSafeArea()

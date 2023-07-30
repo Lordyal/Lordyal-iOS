@@ -10,7 +10,6 @@ import Foundation
 
 final class APIService {
     static let shared = APIService()
-    let test = "test"
     let session = URLSession.shared
 
     private init() {}
