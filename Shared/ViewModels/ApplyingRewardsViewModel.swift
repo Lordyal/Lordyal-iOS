@@ -148,3 +148,39 @@ struct AvailableRewardItemDataModel: Codable {
         )
     }
 }
+
+/*
+ "_id": "64d5c16d77edefb4fcba5385",
+ "user_id": 29,
+ "merchant_id": 32,
+ "store_id": 4,
+ "reward_id": 45,
+ "is_redeemed": false,
+ "points_accumulated": 5,
+ "redeem_date": null,
+ "created_at": "2023-08-11T05:04:47.475Z",
+ "updated_at": "2023-08-11T05:04:45.998Z",
+ "id": 18,
+ "status": "",
+ "__v": 0
+ */
+
+// TODO: Create Model (hasn't done)
+struct AccumulationRewardItemDataModel: Codable{
+    let id: Int
+    let userId: Int
+    let merchantId: Int
+    let storeId: Int
+    let rewardId: Int
+    let isRedeemed: Bool
+    let pointAccumulated: Int
+    let redeemDate: Any?
+    let createdAt: String
+    let updatedAt: String
+    let mechantId: Int
+    
+    int(from decoder: Decoder) throws {
+        
+    }
+    
+}
