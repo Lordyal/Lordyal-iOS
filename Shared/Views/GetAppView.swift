@@ -32,7 +32,7 @@ struct GetAppView: View {
                     .foregroundColor(Color.boldGreen)
                     .font(.system(size: 30, weight: .black))
                     .padding(.bottom, 3)
-                Text("To track more of your rewards and earn more offers, download LORDYAL today!")
+                Text("To track more of your rewards and earn more offers, download Taperk today!")
                     .foregroundColor(Color.mediumGreen)
                     .font(.system(size: 16))
                     .multilineTextAlignment(.center)
@@ -42,7 +42,7 @@ struct GetAppView: View {
                 Image("logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 350, height: 350)
                 Spacer()
                 HStack {
                     Spacer()

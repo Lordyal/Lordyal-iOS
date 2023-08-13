@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "taperk-main-white.png",
+      "filename" : "taperk-main-blk.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "taperk-main-white 1.png",
+      "filename" : "taperk-main-blk 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "taperk-main-white 2.png",
+      "filename" : "taperk-main-blk 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
