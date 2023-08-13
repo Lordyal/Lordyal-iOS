@@ -28,6 +28,8 @@ struct ApplyingRewardItemView: View {
                 HStack {
                     if model.selected {
                         Image("checked")
+                    } else {
+                        Image("unchecked")
                     }
                     Spacer()
                     HStack {
@@ -67,7 +69,8 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
                 title: "Free normal size Spaghetti",
                 imageURL: "",
                 collectedPoints: 4,
-                totalPoint: 6
+                totalPoint: 6,
+                convertRatio: 1/6
             )
         )
         ApplyingRewardItemView(
@@ -77,7 +80,8 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
                 title: "Free normal size Spaghetti",
                 imageURL: "",
                 collectedPoints: 6,
-                totalPoint: 6
+                totalPoint: 6,
+                convertRatio: 1/6
             )
         )
     }

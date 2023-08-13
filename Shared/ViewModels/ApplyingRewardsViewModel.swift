@@ -11,6 +11,9 @@ import Combine
 class ApplyingRewardsViewModel: ObservableObject {
     @Published var items: [ApplyingRewardItemModel] = []
     @Published var redeemEnabled: Bool = false
+    
+    private var defaults = UserDefaults(suiteName: "group.lordyalapp.appClipMigration")
+
     var selectedItem: ApplyingRewardItemModel? {
         items.first { $0.selected }
     }
@@ -26,12 +29,13 @@ class ApplyingRewardsViewModel: ObservableObject {
         redeemEnabled = selectedItem != nil
     }
 
-    func getList() {
+    func getList(merchantID: String) {
         Task {
             do {
+                let user_id = self.defaults!.string(forKey: "user_id")
                 let url = URL.buildURL(
                     path: APIPath.availableRewards,
-                    queries: ["user_id": "2", "merchant_id": "44"]
+                    queries: ["user_id": user_id, "merchant_id": merchantID]
                 )
                 let data: AvailableRewardDataModel = try await APIService.shared.get(
                     url
@@ -54,6 +58,7 @@ struct ApplyingRewardItemModel: Identifiable {
     var imageURL: String
     var collectedPoints: Int
     var totalPoint: Int
+    var convertRatio: Float
     var storeName: String = "Taperk's Kitchen"
 
     var id: String {
@@ -109,6 +114,7 @@ struct AvailableRewardItemDataModel: Codable {
     let imageURL: String?
     let redeemPoints: Int
     let pointsAccumulated: Int
+    let convertRatio: Float
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -121,6 +127,7 @@ struct AvailableRewardItemDataModel: Codable {
         case imageURL = "image_url"
         case redeemPoints = "redeem_points"
         case pointsAccumulated = "points_accumulated"
+        case convertRatio = "points_convert_ratio"
     }
 
     init(from decoder: Decoder) throws {
@@ -135,6 +142,7 @@ struct AvailableRewardItemDataModel: Codable {
         self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL)
         self.redeemPoints = try container.decodeIfPresent(Int.self, forKey: .redeemPoints) ?? 0
         self.pointsAccumulated = try container.decodeIfPresent(Int.self, forKey: .pointsAccumulated) ?? 0
+        self.convertRatio = try container.decodeIfPresent(Float.self, forKey: .convertRatio) ?? 0.0
     }
 
     func convertToItemModel() -> ApplyingRewardItemModel {
@@ -144,6 +152,7 @@ struct AvailableRewardItemDataModel: Codable {
             imageURL: imageURL ?? "",
             collectedPoints: pointsAccumulated,
             totalPoint: redeemPoints,
+            convertRatio: convertRatio,
             storeName: name
         )
     }

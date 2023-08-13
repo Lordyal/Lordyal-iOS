@@ -57,6 +57,7 @@ struct GetAppView: View {
                     Spacer()
                     Button {
                         // TODO: Handle open App Store
+                        
                     } label: {
                         Text("Download")
                             .foregroundColor(.white)

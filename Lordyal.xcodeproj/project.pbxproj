@@ -49,6 +49,22 @@
 		D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D739501729ED8DBF000C4F78 /* Assets.xcassets */; };
 		D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D739501929ED8DBF000C4F78 /* LaunchScreen.storyboard */; };
 		D739502029ED8DBF000C4F78 /* LordyalClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = D739500C29ED8DBD000C4F78 /* LordyalClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E82A95F82ACAFEC8002F3A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A95F72ACAFEC8002F3A7D /* AppDelegate.swift */; };
+		E82A95FB2ACB8FA3002F3A7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D739501229ED8DBD000C4F78 /* ViewController.swift */; };
+		E82A96022ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A95FE2ACB9517002F3A7D /* OpenSans-Regular.ttf */; };
+		E82A96032ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A95FE2ACB9517002F3A7D /* OpenSans-Regular.ttf */; };
+		E82A96042ACB9518002F3A7D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A95FF2ACB9517002F3A7D /* OpenSans-SemiBold.ttf */; };
+		E82A96052ACB9518002F3A7D /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A95FF2ACB9517002F3A7D /* OpenSans-SemiBold.ttf */; };
+		E82A96062ACB9518002F3A7D /* SFUFuturaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A96002ACB9517002F3A7D /* SFUFuturaBold.ttf */; };
+		E82A96072ACB9518002F3A7D /* SFUFuturaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A96002ACB9517002F3A7D /* SFUFuturaBold.ttf */; };
+		E82A96082ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A96012ACB9517002F3A7D /* OpenSans-Bold.ttf */; };
+		E82A96092ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E82A96012ACB9517002F3A7D /* OpenSans-Bold.ttf */; };
+		E82A960B2ACB9684002F3A7D /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A960A2ACB9684002F3A7D /* Font+Extension.swift */; };
+		E82A960C2ACB9684002F3A7D /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A960A2ACB9684002F3A7D /* Font+Extension.swift */; };
+		E82A96102ACB9B10002F3A7D /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A960F2ACB9B10002F3A7D /* BackButton.swift */; };
+		E82A96112ACB9B11002F3A7D /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A960F2ACB9B10002F3A7D /* BackButton.swift */; };
+		E82A96132ACB9D1C002F3A7D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A96122ACB9D1C002F3A7D /* RoundButton.swift */; };
+		E82A96142ACB9D1C002F3A7D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A96122ACB9D1C002F3A7D /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +119,14 @@
 		D739501A29ED8DBF000C4F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D739501C29ED8DBF000C4F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D739501D29ED8DBF000C4F78 /* LordyalClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LordyalClip.entitlements; sourceTree = "<group>"; };
+		E82A95F72ACAFEC8002F3A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E82A95FE2ACB9517002F3A7D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E82A95FF2ACB9517002F3A7D /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E82A96002ACB9517002F3A7D /* SFUFuturaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFUFuturaBold.ttf; sourceTree = "<group>"; };
+		E82A96012ACB9517002F3A7D /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E82A960A2ACB9684002F3A7D /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		E82A960F2ACB9B10002F3A7D /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		E82A96122ACB9D1C002F3A7D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				9C97557429FADBDC0051EF1F /* UIColor+Extension.swift */,
+				E82A960A2ACB9684002F3A7D /* Font+Extension.swift */,
 				9CCE7D1C2A250AF60037209E /* Color+Extension.swift */,
 			);
 			path = Extensions;
@@ -147,22 +172,16 @@
 		9CB354F529F96FD500326449 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E82A960E2ACB9AFD002F3A7D /* UI */,
+				E82A95FD2ACB9508002F3A7D /* Fonts */,
 				9C3CD5582A52838000D66E6C /* Services */,
 				9CDCE6452A27A9EA004055D8 /* ViewModels */,
 				9CCE7D172A2504F00037209E /* Views */,
 				9C97557329FADBCE0051EF1F /* Extensions */,
-				9CB354F629F96FE600326449 /* Models */,
 				9CCE7D1A2A250A1B0037209E /* Colors.xcassets */,
 				9CDCE6462A27AD40004055D8 /* Icons.xcassets */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		9CB354F629F96FE600326449 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		9CB3550229F975B200326449 /* Frameworks */ = {
@@ -236,8 +255,29 @@
 				D739501C29ED8DBF000C4F78 /* Info.plist */,
 				D739501D29ED8DBF000C4F78 /* LordyalClip.entitlements */,
 				9CCE7D122A2503570037209E /* LordyalClipApp.swift */,
+				E82A95F72ACAFEC8002F3A7D /* AppDelegate.swift */,
 			);
 			path = LordyalClip;
+			sourceTree = "<group>";
+		};
+		E82A95FD2ACB9508002F3A7D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E82A96012ACB9517002F3A7D /* OpenSans-Bold.ttf */,
+				E82A95FE2ACB9517002F3A7D /* OpenSans-Regular.ttf */,
+				E82A95FF2ACB9517002F3A7D /* OpenSans-SemiBold.ttf */,
+				E82A96002ACB9517002F3A7D /* SFUFuturaBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E82A960E2ACB9AFD002F3A7D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E82A960F2ACB9B10002F3A7D /* BackButton.swift */,
+				E82A96122ACB9D1C002F3A7D /* RoundButton.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +375,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82A96022ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */,
 				9CCE7D1B2A250A1B0037209E /* Colors.xcassets in Resources */,
+				E82A96082ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */,
 				D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */,
 				9CDCE6472A27AD40004055D8 /* Icons.xcassets in Resources */,
+				E82A96042ACB9518002F3A7D /* OpenSans-SemiBold.ttf in Resources */,
+				E82A96062ACB9518002F3A7D /* SFUFuturaBold.ttf in Resources */,
 				D7394FFE29ED8BC2000C4F78 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,9 +390,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82A96032ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */,
 				9CCE7D1F2A2511430037209E /* Colors.xcassets in Resources */,
+				E82A96092ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */,
 				D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */,
 				9CDCE6482A27AD40004055D8 /* Icons.xcassets in Resources */,
+				E82A96052ACB9518002F3A7D /* OpenSans-SemiBold.ttf in Resources */,
+				E82A96072ACB9518002F3A7D /* SFUFuturaBold.ttf in Resources */,
 				D739501829ED8DBF000C4F78 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,11 +408,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82A96132ACB9D1C002F3A7D /* RoundButton.swift in Sources */,
+				E82A95FB2ACB8FA3002F3A7D /* ViewController.swift in Sources */,
 				9CCE7D152A2504130037209E /* LordyalApp.swift in Sources */,
 				9CCE7D192A2505070037209E /* GetAppView.swift in Sources */,
 				9CDCE63D2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
 				9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */,
 				9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */,
+				E82A96102ACB9B10002F3A7D /* BackButton.swift in Sources */,
 				9CBFDFBE2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
 				9C86D69C2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */,
 				9CC67C7F2A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
@@ -373,6 +424,7 @@
 				9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */,
 				9CDCE6432A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
 				9CCE7D1D2A250AF60037209E /* Color+Extension.swift in Sources */,
+				E82A960B2ACB9684002F3A7D /* Font+Extension.swift in Sources */,
 				9CDCE6402A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,15 +436,19 @@
 				9CDCE63E2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
 				9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */,
 				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
+				E82A960C2ACB9684002F3A7D /* Font+Extension.swift in Sources */,
+				E82A96142ACB9D1C002F3A7D /* RoundButton.swift in Sources */,
 				9C28BFD82A331A37000E5C34 /* UserProfileInputViewModel.swift in Sources */,
 				9CDCE6442A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
 				9CCE7D1E2A2511320037209E /* GetAppView.swift in Sources */,
 				9C7369D52A323C4E001407ED /* GenderSelectionView.swift in Sources */,
 				9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */,
+				E82A95F82ACAFEC8002F3A7D /* AppDelegate.swift in Sources */,
 				9C86D69D2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */,
 				9CDCE6412A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 				9CCE7D202A2511460037209E /* Color+Extension.swift in Sources */,
 				9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
+				E82A96112ACB9B11002F3A7D /* BackButton.swift in Sources */,
 				9CCE7D132A2503570037209E /* LordyalClipApp.swift in Sources */,
 				9CBFDFBF2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
 				9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
@@ -492,7 +548,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APPCLIP";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -545,6 +601,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPCLIP;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;

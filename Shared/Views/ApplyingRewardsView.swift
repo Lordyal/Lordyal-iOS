@@ -12,6 +12,8 @@ struct ApplyingRewardsView: View {
     private let twoColumnsLayout = [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)]
 
     @ObservedObject var viewModel: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
+    
+    @Binding var merchantID: String
 
     var body: some View {
         NavigationView {
@@ -21,6 +23,7 @@ struct ApplyingRewardsView: View {
                 ScrollView {
                     VStack {
                         Text("Select a reward\nto apply 3 points")
+                            .font(.Title())
                             .foregroundColor(.boldGreen)
                             .font(.system(size: 30, weight: .black))
                             .multilineTextAlignment(.center)
@@ -33,10 +36,10 @@ struct ApplyingRewardsView: View {
                                     }
                             }
                         }
+                        .padding(.horizontal, 20)
                     }
-                    .padding(.horizontal, 16)
                 }
-
+                
                 VStack {
                     Spacer()
                     LinearGradient(
@@ -53,15 +56,12 @@ struct ApplyingRewardsView: View {
                 VStack {
                     Spacer()
                     HStack {
-                        Spacer()
-                            .frame(width: 64)
                         Button {
                             // TODO: Handle open later
                         } label: {
                             Text("Later")
-                                .foregroundColor(.boldGreen)
-                                .font(.system(size: 20, weight: .bold))
                         }
+                        .buttonStyle(BackButton())
                         Spacer()
                         NavigationLink {
                             if let selectedItem = viewModel.selectedItem?.toRewardModel() {
@@ -70,31 +70,27 @@ struct ApplyingRewardsView: View {
                             }
                         } label: {
                             Text("Next")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.horizontal, 32)
-                                .padding(.vertical, 12)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 48)
-                                        .foregroundColor(.boldGreen)
-                                }
                         }
+                        .buttonStyle(RoundButton())
                         .disabled(!viewModel.redeemEnabled)
-                        Spacer()
-                            .frame(width: 32)
                     }
-                    .padding()
+                    .padding(EdgeInsets(top: 0, leading: 50, bottom: 20, trailing: 50))
                 }
             }
         }
         .onAppear {
-            viewModel.getList()
+            print("Merchant ID (ApplyingView): \(merchantID)")
+            viewModel.getList(merchantID: merchantID)
+        }
+        .onChange(of: merchantID) { merchantID in
+            viewModel.getList(merchantID: merchantID)
         }
     }
 }
 
 struct ApplyingRewardsView_Previews: PreviewProvider {
+    @State static var merchant_id: String = "44"
     static var previews: some View {
-        ApplyingRewardsView()
+        ApplyingRewardsView(merchantID: $merchant_id)
     }
 }
