@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7476E32D2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476E32C2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift */; };
+		7476E32E2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476E32C2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift */; };
 		9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CD5592A52BC1800D66E6C /* APIService.swift */; };
 		9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */; };
 		9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */; };
@@ -76,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7476E32C2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccumulationRewardsViewModel.swift; sourceTree = "<group>"; };
 		9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputViewModel.swift; sourceTree = "<group>"; };
 		9C3CD5592A52BC1800D66E6C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9C7369D02A323AC1001407ED /* UserProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInputView.swift; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 			children = (
 				9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */,
 				9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */,
+				7476E32C2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -360,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7476E32D2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift in Sources */,
 				9CCE7D152A2504130037209E /* LordyalApp.swift in Sources */,
 				9CCE7D192A2505070037209E /* GetAppView.swift in Sources */,
 				9CDCE63D2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
@@ -395,6 +400,7 @@
 				9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
 				9CCE7D132A2503570037209E /* LordyalClipApp.swift in Sources */,
 				9CBFDFBF2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
+				7476E32E2AA50C1C0088F690 /* AccumulationRewardsViewModel.swift in Sources */,
 				9C97557629FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

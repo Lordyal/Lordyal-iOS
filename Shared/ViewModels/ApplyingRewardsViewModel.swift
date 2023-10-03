@@ -25,7 +25,8 @@ class ApplyingRewardsViewModel: ObservableObject {
         }
         redeemEnabled = selectedItem != nil
     }
-
+    
+    // Using GET to get data
     func getList() {
         Task {
             do {
@@ -148,3 +149,5 @@ struct AvailableRewardItemDataModel: Codable {
         )
     }
 }
+
+
