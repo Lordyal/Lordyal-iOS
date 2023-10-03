@@ -32,6 +32,34 @@ final class APIService {
 
         return try decoder.decode(T.self, from: data)
     }
+    
+
+    func post<T: Codable, U: Encodable>(
+        _ url: URL,
+        headers: [String: String] = [:],
+        body: U,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder()
+    ) async throws -> T {
+        var urlRequest = URLRequest(url: url)
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.httpMethod = "POST"
+        
+        // Encode the request body
+        urlRequest.httpBody = try encoder.encode(body)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+
+        guard let httpResponse = response as? HTTPURLResponse,
+              200...299 ~= httpResponse.statusCode else {
+            throw URLError(.badServerResponse)
+        }
+
+        return try decoder.decode(T.self, from: data)
+    }
+
+    
 }
 
 extension URL {
