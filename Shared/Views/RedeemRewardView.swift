@@ -9,6 +9,11 @@ import SwiftUI
 
 struct RedeemRewardView: View {
     @State var model: RewardModel
+    @StateObject var userRewards: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
+    @State var showRewards = false
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var urlModel: InvocationURLModel
+    
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
@@ -19,15 +24,16 @@ struct RedeemRewardView: View {
                         Spacer().frame(height: 20)
 
                         Text(model.isClaimable ? "Ready to redeem!" : "You're getting closer!")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.Title())
                             .foregroundColor(.white)
 
                         HStack {
                             Image(model.isClaimable ? "claim" : "unclaim")
                                 .resizable()
                                 .frame(width: 50, height: 50)
+                            Spacer().frame(width: 12)
                             Text("\(model.points)/\(model.totalPoints)")
-                                .font(.system(size: 48, weight: .bold))
+                                .font(.ExtraBold())
                                 .foregroundColor(model.isClaimable ? .white : .boldGreen)
                         }
                         .padding(.horizontal, 24)
@@ -52,13 +58,14 @@ struct RedeemRewardView: View {
                                 VStack {
                                     Spacer()
                                     Text(model.storeName)
-                                        .font(.system(size: 24))
+                                        .lineLimit(1)
+                                        .font(.SemiBold(size: 20))
                                         .foregroundColor(.white)
                                         .padding(.bottom, -10)
                                     Text(model.rewardDescription)
                                         .lineLimit(2)
                                         .multilineTextAlignment(.center)
-                                        .font(.system(size: 30, weight: .bold))
+                                        .font(.Bold(size: 28))
                                         .foregroundColor(.white)
                                     Spacer().frame(height: 20)
                                 }
@@ -66,70 +73,73 @@ struct RedeemRewardView: View {
                         }
                         .aspectRatio(1, contentMode: .fit)
                         .padding(.horizontal, 40)
-                        .padding(.vertical, 20)
+                        .padding(.top, 20)
 
                         Spacer()
 
                         if model.isClaimable {
-                            VStack {
+                            VStack (spacing: 4) {
                                 Text("Redeem now?")
                                     .foregroundColor(.boldGreen)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .padding(.bottom, 2)
-                                Text("Coupon will expire within 5 minutes of redemption time.")
+                                    .font(.SemiBold(size: 20))
+                                Text("Coupon will expire within 5 minutes\nof redemption time.")
+                                    .font(.Body(size: 16))
                                     .foregroundColor(.mediumGreen)
-                                    .lineLimit(2)
-                                    .multilineTextAlignment(.center)
                             }
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 10)
                         } else {
-                            Text("Earn \(model.totalPoints - model.points) more point(s) to get this reward!")
+                            Text("Earn \(model.totalPoints - model.points) more point\(model.totalPoints - model.points > 1 ? "s" : "") to get\nthis reward!")
                                 .foregroundColor(.boldGreen)
-                                .font(.system(size: 20, weight: .semibold))
+                                .font(.SemiBold(size: 20))
+                                .multilineTextAlignment(.center)
                         }
 
                         Spacer()
 
                         if model.isClaimable {
                             HStack {
-                                Spacer().frame(width: 40)
                                 Button {
-                                    // TODO: Handle open later
+                                    self.presentationMode.wrappedValue.dismiss()
                                 } label: {
-                                    HStack {
-                                        Image(systemName: "chevron.left")
-                                            .foregroundColor(.boldGreen)
-                                            .font(.system(size: 16, weight: .bold))
-                                        Spacer().frame(width: 30)
-                                        Text("Later")
-                                            .foregroundColor(.boldGreen)
-                                            .font(.system(size: 20, weight: .bold))
-                                    }
+                                    Text("Later")
                                 }
+                                .buttonStyle(BackButton())
                                 Spacer()
                                 NavigationLink {
-                                    UserProfileInputView(viewModel: UserProfileInputViewModel())
-                                        .navigationBarBackButtonHidden()
+                                    if UserDefaultsManager.userProfile == nil {
+                                        UserProfileInputView(
+                                            viewModel: UserProfileInputViewModel(),
+                                            rewardModel: model,
+                                            urlModel: urlModel
+                                        )
+                                        
+                                    } else {
+                                        // TODO: go to scan bar code view
+                                        ScanBarCodeView()
+                                    }
                                 } label: {
                                     Text("Redeem")
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 20, weight: .bold))
-                                        .padding(.horizontal, 32)
-                                        .padding(.vertical, 12)
-                                        .background {
-                                            RoundedRectangle(cornerRadius: 48)
-                                                .foregroundColor(.boldGreen)
-                                        }
                                 }
+                                .navigationBarBackButtonHidden()
+                                .buttonStyle(RoundButton())
+                                .simultaneousGesture(TapGesture().onEnded {
+                                    if UserDefaultsManager.userProfile != nil {
+                                        print("trying to redeem")
+                                        model.redeemReward(merchantID: urlModel.merchantID, storeID: urlModel.storeID)
+                                    }
+                                })
                             }
-                            .padding()
+                            .padding(EdgeInsets(top: 12, leading: 40, bottom: 12, trailing: 36))
                         } else {
-                            Button {
-                                // TODO: Handle open App Store
+                            NavigationLink {
+                                GetAppView()
+                                    .navigationBarBackButtonHidden()
                             } label: {
                                 HStack {
                                     Text("GET TAPERK APP")
                                         .foregroundColor(.white)
-                                        .font(.system(size: 20, weight: .bold))
+                                        .font(.Bold(size: 20))
                                         .padding(.vertical, 4)
                                     Image(systemName: "chevron.right")
                                         .font(.system(size: 16, weight: .bold))
@@ -145,19 +155,28 @@ struct RedeemRewardView: View {
                         Spacer()
 
                         Button {
-                            // TODO: Open see more reward
+                            showRewards.toggle()
+                            if showRewards {
+                                userRewards.getUserRewards(rewardID: model.id, urlModel: urlModel)
+                            }
                         } label: {
                             VStack {
                                 Text("See more rewards")
-                                    .font(.system(size: 16, weight: .light))
+                                    .font(.Body())
                                     .foregroundColor(.boldGreen.opacity(0.3))
                                     .padding(.bottom, 10)
                                 Image(systemName: "chevron.down")
+                                    .font(.system(size: 16, weight: .semibold))
                                     .foregroundColor(.boldGreen.opacity(0.3))
                                     .padding(.bottom, 10)
                             }
                             .frame(maxWidth: .infinity)
                         }
+                        .sheet(isPresented: $showRewards, content: {
+                            AvailableRewardsView(viewModel: userRewards, urlModel: urlModel, reward: $model, isLoading: $userRewards.isLoading)
+                                .presentationDetents([.medium, .large])
+                                .presentationDragIndicator(.automatic)
+                        })
                     }
                 }
             }
@@ -169,12 +188,12 @@ struct RedeemRewardView: View {
             Color.lightGreen.ignoresSafeArea()
             GeometryReader { reader in
                 let width = reader.size.width
-                let height: CGFloat = 300
+                let height: CGFloat = 315
 
                 Path { path in
                     path.move(to: .zero)
                     path.addLine(to: CGPoint(x: 0, y: height))
-                    path.addQuadCurve(to: CGPoint(x: width, y: height), control: CGPoint(x: width / 2, y: height + 100))
+                    path.addQuadCurve(to: CGPoint(x: width, y: height), control: CGPoint(x: width / 2, y: height + 60))
                     path.addLine(to: CGPoint(x: width, y: 0))
                 }
                 .fill(Color.mediumGreen)
@@ -183,35 +202,27 @@ struct RedeemRewardView: View {
     }
 }
 
-struct RewardModel {
-    var points: Int
-    var totalPoints: Int
-    var storeName: String
-    var rewardDescription: String
-    var imageURL: String = ""
-
-    var isClaimable: Bool {
-        points == totalPoints
-    }
-}
-
 struct RedeemRewardView_Previews: PreviewProvider {
     static var previews: some View {
         RedeemRewardView(
             model: RewardModel(
+                id: 1,
                 points: 5,
                 totalPoints: 6,
                 storeName: "Taperk's Kitchen",
                 rewardDescription: "Free Normal Size Spaghetti"
-            )
+            ),
+            urlModel: InvocationURLModel()
         )
         RedeemRewardView(
             model: RewardModel(
+                id: 2,
                 points: 6,
                 totalPoints: 6,
                 storeName: "Taperk's Kitchen",
                 rewardDescription: "Free Normal Size Spaghetti"
-            )
+            ),
+            urlModel: InvocationURLModel()
         )
     }
 }

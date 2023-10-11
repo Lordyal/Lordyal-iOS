@@ -31,4 +31,37 @@ class UserProfileInputViewModel: ObservableObject {
 
         selectedGender = nil
     }
+    
+    func isFilled() -> Bool {
+        return (dateOfBirth != nil) && !phoneNumber.isEmpty && (selectedGender != nil)
+    }
+    
+    func toUserProfileModel() -> UserProfileModel? {
+        if !isFilled() {
+            return nil
+        }
+        
+        let dateOfBirth = dateOfBirth!
+        let selectedGender = selectedGender!
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let dob: String = formatter.string(from: dateOfBirth)
+        
+        let gender: String = selectedGender.label
+        
+        return UserProfileModel(dateOfBirth: dob, phoneNumber: phoneNumber, selectedGender: gender)
+    }
+}
+
+struct UserProfileModel: Codable {
+    let dateOfBirth: String
+    let phoneNumber: String
+    let selectedGender: String
+    
+    func saveUserProfile() {
+        if UserDefaultsManager.userProfile == nil {
+            UserDefaultsManager.userProfile = self
+        }
+    }
 }

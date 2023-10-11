@@ -24,4 +24,8 @@ extension UIColor {
     static var boldGreen: UIColor {
         UIColor(red: 0, green: 76/255, blue: 72/255, alpha: 1)
     }
+    
+    static var mustard: UIColor {
+        UIColor(red: 254/255, green: 190/255, blue: 0, alpha: 1)
+    }
 }

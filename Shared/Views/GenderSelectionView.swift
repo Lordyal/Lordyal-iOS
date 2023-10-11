@@ -33,7 +33,7 @@ struct GenderSelectionView: View {
                     .aspectRatio(contentMode: .fit)
             }
             Text(gender.label)
-                .font(.system(size: 20, weight: .semibold))
+                .font(.SemiBold())
                 .foregroundColor(selected ? .white : .boldGreen)
         }
         .padding(.vertical)

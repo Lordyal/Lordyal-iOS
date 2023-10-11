@@ -28,6 +28,8 @@ struct ApplyingRewardItemView: View {
                 HStack {
                     if model.selected {
                         Image("checked")
+                    } else {
+                        Image("unchecked")
                     }
                     Spacer()
                     HStack {
@@ -35,7 +37,7 @@ struct ApplyingRewardItemView: View {
                             .resizable()
                             .frame(width: 18, height: 18)
                         Text("\(model.collectedPoints)/\(model.totalPoint)")
-                            .font(.system(size: 12, weight: .bold))
+                            .font(.Bold(size: 12))
                             .foregroundColor(model.isClaimable ? .white : .boldGreen)
                     }
                     .padding(.horizontal, 10)
@@ -49,7 +51,7 @@ struct ApplyingRewardItemView: View {
                 Spacer()
                 Text(model.title)
                     .foregroundColor(.white)
-                    .font(.system(size: 12, weight: .bold))
+                    .font(.Bold(size: 12))
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
             }

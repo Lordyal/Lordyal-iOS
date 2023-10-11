@@ -10,7 +10,10 @@ import SwiftUI
 import PhoneNumberKit
 
 struct UserProfileInputView: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: UserProfileInputViewModel
+    let rewardModel: RewardModel
+    @ObservedObject var urlModel: InvocationURLModel
     @State var date = Date()
     @State var showDatePicker = false
     var phoneNumberKit = PhoneNumberKit()
@@ -24,18 +27,19 @@ struct UserProfileInputView: View {
             ZStack {
                 Color.lightGreen
                     .ignoresSafeArea()
+
                 VStack {
                     Spacer().frame(height: 30)
                     Text("To redeem your reward and make sure you receive the best personalized offers, we want to know more about you.")
+                        .font(.Body())
                         .foregroundColor(.mediumGreen)
                         .padding(.bottom, 40)
-
                     Group {
                         Text("Gender")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.Bold())
                             .foregroundColor(.boldGreen)
                             .frame(maxWidth: .infinity, alignment: .leading)
-
+                            .padding(.bottom, -1)
                         VStack {
                             HStack {
                                 GenderSelectionView(
@@ -57,11 +61,12 @@ struct UserProfileInputView: View {
                     Group {
                         Spacer().frame(height: 24)
                         Text("Date of Birth")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.Bold())
                             .foregroundColor(.boldGreen)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, -1)
                         Text(date, style: .date)
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.SemiBold())
                             .foregroundColor(.boldGreen)
                             .frame(maxWidth: .infinity)
                             .padding()
@@ -70,26 +75,30 @@ struct UserProfileInputView: View {
                                     .foregroundColor(.white)
                                     .cornerRadius(48)
                                     .shadow(color: .gray.opacity(0.3), radius: 10)
+                        }
+                        .onTapGesture {
+                            withAnimation {
+                                showDatePicker.toggle()
                             }
-                            .onTapGesture {
-                                showDatePicker = true
-                            }
-                            .sheet(isPresented: $showDatePicker) {
-                                DatePickerView(date: $date)
-                            }
+                        }
+//                        .sheet(isPresented: $showDatePicker) {
+//                            DatePickerView(date: $date, show: $showDatePicker)
+//                                .presentationDetents([.medium])
+//                        }
                     }
 
                     Group {
                         Spacer().frame(height: 24)
                         Text("Phone number")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.Bold())
                             .foregroundColor(.boldGreen)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, -1)
                         ZStack {
                             HStack {
                                 HStack {
                                     Text("US")
-                                        .font(.system(size: 16, weight: .bold))
+                                        .font(.Bold(size: 16))
                                         .foregroundColor(.boldGreen)
                                         .padding(10)
                                         .background {
@@ -98,7 +107,7 @@ struct UserProfileInputView: View {
                                                 .foregroundColor(.black.opacity(0.05))
                                         }
                                     Text("+1")
-                                        .font(.system(size: 16, weight: .bold))
+                                        .font(.Bold(size: 16))
                                         .foregroundColor(.boldGreen)
                                 }
                                 .padding(.horizontal)
@@ -109,7 +118,7 @@ struct UserProfileInputView: View {
                                         .shadow(color: .gray.opacity(0.3), radius: 10)
                                 }
                                 TextField("Phone number", text: $viewModel.phoneNumber)
-                                    .font(.system(size: 20, weight: .bold))
+                                    .font(.SemiBold())
                                     .foregroundColor(.boldGreen)
                                 Spacer()
                             }
@@ -125,46 +134,60 @@ struct UserProfileInputView: View {
 
                     HStack {
                         Button {
-                            // TODO: Handle open later
+                            self.presentationMode.wrappedValue.dismiss()
                         } label: {
-                            HStack {
-                                Image(systemName: "chevron.left")
-                                    .foregroundColor(.boldGreen)
-                                    .font(.system(size: 16, weight: .bold))
-                                Spacer().frame(width: 30)
-                                Text("Later")
-                                    .foregroundColor(.boldGreen)
-                                    .font(.system(size: 20, weight: .bold))
-                            }
+                            Text("Later")
                         }
+                        .buttonStyle(BackButton())
                         Spacer()
                         NavigationLink {
-                            ScanBarCodeView()
-                                .navigationBarBackButtonHidden()
+                            if viewModel.isFilled() {
+                                ScanBarCodeView()
+                                    .navigationBarBackButtonHidden()
+                            }
                         } label: {
                             Text("Redeem")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.horizontal, 32)
-                                .padding(.vertical, 12)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 48)
-                                        .foregroundColor(.boldGreen)
-                                }
                         }
+                        .buttonStyle(RoundButton())
+                        .simultaneousGesture(TapGesture().onEnded{
+                            viewModel.dateOfBirth = date
+                            if let userProfile = viewModel.toUserProfileModel() {
+                                userProfile.saveUserProfile()
+                            }
+                            rewardModel.redeemReward(merchantID: urlModel.merchantID, storeID: urlModel.storeID)
+                        })
                     }
-                    .padding(.bottom, 16)
+                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 20, trailing: 0))
                 }
                 .padding(.horizontal, 36)
-
+                
+                if (showDatePicker) {
+                    ZStack {
+                        Color.black.opacity(0.3)
+                            .ignoresSafeArea()
+                        DatePickerView(date: $date, show: $showDatePicker)
+                            .padding()
+                    }
+                }
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
 struct UserProfileInputView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileInputView(viewModel: UserProfileInputViewModel())
+        UserProfileInputView(
+            viewModel: UserProfileInputViewModel(),
+            rewardModel: RewardModel(
+                id: 1,
+                points: 5,
+                totalPoints: 6,
+                storeName: "Taperk's Kitchen",
+                rewardDescription: "Free Normal Size Spaghetti"
+            ),
+            urlModel: InvocationURLModel()
+        )
     }
 }
 

@@ -15,11 +15,10 @@ struct GetAppView: View {
             GeometryReader { reader in
                 let width = reader.size.width
                 let height: CGFloat = 300
-
                 Path { path in
                     path.move(to: CGPoint(x: 0, y: reader.size.height))
                     path.addLine(to: CGPoint(x: 0, y: height))
-                    path.addQuadCurve(to: CGPoint(x: width, y: height), control: CGPoint(x: width / 2, y: height - 100))
+                    path.addQuadCurve(to: CGPoint(x: width, y: height), control: CGPoint(x: width / 2, y: height - 60))
                     path.addLine(to: CGPoint(x: width, y: reader.size.height))
                 }
                 .fill(Color.mediumGreen)
@@ -27,23 +26,23 @@ struct GetAppView: View {
             .ignoresSafeArea()
             VStack {
                 Spacer()
-                    .frame(height: 30)
+                    .frame(height: 40)
                 Text("Don't miss our app")
                     .foregroundColor(Color.boldGreen)
-                    .font(.system(size: 30, weight: .black))
-                    .padding(.bottom, 3)
+                    .font(.Title())
+                    .padding(.bottom, 4)
                 Text("To track more of your rewards and earn more offers, download Taperk today!")
                     .foregroundColor(Color.mediumGreen)
-                    .font(.system(size: 16))
+                    .font(.Body())
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 32)
                 Spacer()
-
                 Image("logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 350, height: 350)
                 Spacer()
+                    .frame(height: 24)
                 HStack {
                     Spacer()
                         .frame(width: 64)
@@ -52,27 +51,22 @@ struct GetAppView: View {
                     } label: {
                         Text("Later")
                             .foregroundColor(.white)
-                            .font(.system(size: 20, weight: .bold))
+                            .font(.SemiBold())
                     }
                     Spacer()
                     Button {
-                        // TODO: Handle open App Store
+
                     } label: {
                         Text("Download")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20, weight: .bold))
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 4)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .buttonBorderShape(.capsule)
-                    .tint(.boldGreen)
+                    .buttonStyle(RoundButton())
                     Spacer()
                         .frame(width: 32)
                 }
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -5,13 +5,16 @@
 //  Created by Nguyen Hoang Phuc on 31/05/2023.
 //
 
-import SwiftUI
+import SwiftUI 
+import Combine
 
 struct ApplyingRewardsView: View {
 
     private let twoColumnsLayout = [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)]
 
-    @ObservedObject var viewModel: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
+    @StateObject var viewModel: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
+    @ObservedObject var urlModel: InvocationURLModel
+    @State private var isRedeemable = false
 
     var body: some View {
         NavigationView {
@@ -20,7 +23,8 @@ struct ApplyingRewardsView: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
-                        Text("Select a reward\nto apply 3 points")
+                        Text("Select a reward\nto apply \(urlModel.points) point\(urlModel.points > 1 ? "s" : "")")
+                            .font(.Title())
                             .foregroundColor(.boldGreen)
                             .font(.system(size: 30, weight: .black))
                             .multilineTextAlignment(.center)
@@ -33,10 +37,9 @@ struct ApplyingRewardsView: View {
                                     }
                             }
                         }
+                        .padding(.horizontal, 20)
                     }
-                    .padding(.horizontal, 16)
                 }
-
                 VStack {
                     Spacer()
                     LinearGradient(
@@ -53,48 +56,51 @@ struct ApplyingRewardsView: View {
                 VStack {
                     Spacer()
                     HStack {
-                        Spacer()
-                            .frame(width: 64)
                         Button {
                             // TODO: Handle open later
                         } label: {
                             Text("Later")
-                                .foregroundColor(.boldGreen)
-                                .font(.system(size: 20, weight: .bold))
                         }
+                        .buttonStyle(BackButton())
                         Spacer()
                         NavigationLink {
-                            if let selectedItem = viewModel.selectedItem?.toRewardModel() {
-                                RedeemRewardView(model: selectedItem)
+                            let selectedItem = viewModel.selectedItem
+                            if let selectedItem = selectedItem?.toRewardModel() {
+                                RedeemRewardView(model: selectedItem, urlModel: urlModel)
                                     .navigationBarBackButtonHidden()
                             }
                         } label: {
                             Text("Next")
-                                .foregroundColor(.white)
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.horizontal, 32)
-                                .padding(.vertical, 12)
-                                .background {
-                                    RoundedRectangle(cornerRadius: 48)
-                                        .foregroundColor(.boldGreen)
-                                }
                         }
+                        .buttonStyle(RoundButton())
                         .disabled(!viewModel.redeemEnabled)
-                        Spacer()
-                            .frame(width: 32)
+                        .simultaneousGesture(TapGesture().onEnded {
+                            let selectedItem = viewModel.selectedItem
+                            if selectedItem?.toRewardModel() != nil {
+                                if (!selectedItem!.isClaimable) {
+                                    selectedItem!.accumulatePoints(storeID: urlModel.storeID, orderID: urlModel.orderID, merchantID: urlModel.merchantID)
+                                }
+                            }
+                        })
                     }
-                    .padding()
+                    .padding(EdgeInsets(top: 0, leading: 40, bottom: 20, trailing: 36))
+                }
+                if viewModel.isLoading {
+                    ProgressView() {
+                        Text("Getting rewards")
+                            .font(.Body())
+                    }
                 }
             }
         }
-        .onAppear {
-            viewModel.getList()
+        .onChange(of: urlModel.merchantID) { merchantID in
+            viewModel.getList(merchantID: merchantID, points: urlModel.points)
         }
     }
 }
 
 struct ApplyingRewardsView_Previews: PreviewProvider {
     static var previews: some View {
-        ApplyingRewardsView()
+        ApplyingRewardsView(urlModel: InvocationURLModel())
     }
 }
