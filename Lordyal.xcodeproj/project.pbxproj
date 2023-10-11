@@ -65,6 +65,18 @@
 		E82A96112ACB9B11002F3A7D /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A960F2ACB9B10002F3A7D /* BackButton.swift */; };
 		E82A96132ACB9D1C002F3A7D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A96122ACB9D1C002F3A7D /* RoundButton.swift */; };
 		E82A96142ACB9D1C002F3A7D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A96122ACB9D1C002F3A7D /* RoundButton.swift */; };
+		E8F375642AD48CC300A2A30E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F375632AD48CC300A2A30E /* UserDefaultsManager.swift */; };
+		E8F375652AD48CC300A2A30E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F375632AD48CC300A2A30E /* UserDefaultsManager.swift */; };
+		E8F890842AD1B60C004BF6F0 /* InvocationURLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F890832AD1B60C004BF6F0 /* InvocationURLModel.swift */; };
+		E8F890852AD1B60C004BF6F0 /* InvocationURLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F890832AD1B60C004BF6F0 /* InvocationURLModel.swift */; };
+		E8F890872AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8F890862AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf */; };
+		E8F890882AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8F890862AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf */; };
+		E8F8908D2AD3183E004BF6F0 /* AvailableRewardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8908C2AD3183D004BF6F0 /* AvailableRewardCardView.swift */; };
+		E8F8908E2AD3183E004BF6F0 /* AvailableRewardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8908C2AD3183D004BF6F0 /* AvailableRewardCardView.swift */; };
+		E8F890902AD3229B004BF6F0 /* AvailableRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8908F2AD3229B004BF6F0 /* AvailableRewardsView.swift */; };
+		E8F890912AD3229B004BF6F0 /* AvailableRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F8908F2AD3229B004BF6F0 /* AvailableRewardsView.swift */; };
+		E8F890932AD388F2004BF6F0 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F890922AD388F2004BF6F0 /* MerchantModel.swift */; };
+		E8F890942AD388F2004BF6F0 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F890922AD388F2004BF6F0 /* MerchantModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +139,12 @@
 		E82A960A2ACB9684002F3A7D /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		E82A960F2ACB9B10002F3A7D /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		E82A96122ACB9D1C002F3A7D /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E8F375632AD48CC300A2A30E /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		E8F890832AD1B60C004BF6F0 /* InvocationURLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvocationURLModel.swift; sourceTree = "<group>"; };
+		E8F890862AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E8F8908C2AD3183D004BF6F0 /* AvailableRewardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRewardCardView.swift; sourceTree = "<group>"; };
+		E8F8908F2AD3229B004BF6F0 /* AvailableRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableRewardsView.swift; sourceTree = "<group>"; };
+		E8F890922AD388F2004BF6F0 /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +216,8 @@
 				9CDCE63C2A27A35E004055D8 /* ScanBarCodeView.swift */,
 				9CDCE63F2A27A88D004055D8 /* ApplyingRewardsView.swift */,
 				9CDCE6422A27A94E004055D8 /* ApplyingRewardItemView.swift */,
+				E8F8908C2AD3183D004BF6F0 /* AvailableRewardCardView.swift */,
+				E8F8908F2AD3229B004BF6F0 /* AvailableRewardsView.swift */,
 				9CBFDFBD2A2CD4CD00ADB6B4 /* RedeemRewardView.swift */,
 				9C7369D02A323AC1001407ED /* UserProfileInputView.swift */,
 				9C7369D32A323C4E001407ED /* GenderSelectionView.swift */,
@@ -210,7 +230,10 @@
 			isa = PBXGroup;
 			children = (
 				9C28BFD62A331900000E5C34 /* UserProfileInputViewModel.swift */,
+				E8F375632AD48CC300A2A30E /* UserDefaultsManager.swift */,
 				9C86D69B2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift */,
+				E8F890832AD1B60C004BF6F0 /* InvocationURLModel.swift */,
+				E8F890922AD388F2004BF6F0 /* MerchantModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,6 +289,7 @@
 				E82A96012ACB9517002F3A7D /* OpenSans-Bold.ttf */,
 				E82A95FE2ACB9517002F3A7D /* OpenSans-Regular.ttf */,
 				E82A95FF2ACB9517002F3A7D /* OpenSans-SemiBold.ttf */,
+				E8F890862AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf */,
 				E82A96002ACB9517002F3A7D /* SFUFuturaBold.ttf */,
 			);
 			path = Fonts;
@@ -377,6 +401,7 @@
 			files = (
 				E82A96022ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */,
 				9CCE7D1B2A250A1B0037209E /* Colors.xcassets in Resources */,
+				E8F890872AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf in Resources */,
 				E82A96082ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */,
 				D739500129ED8BC2000C4F78 /* LaunchScreen.storyboard in Resources */,
 				9CDCE6472A27AD40004055D8 /* Icons.xcassets in Resources */,
@@ -392,6 +417,7 @@
 			files = (
 				E82A96032ACB9518002F3A7D /* OpenSans-Regular.ttf in Resources */,
 				9CCE7D1F2A2511430037209E /* Colors.xcassets in Resources */,
+				E8F890882AD20EA5004BF6F0 /* OpenSans-ExtraBold.ttf in Resources */,
 				E82A96092ACB9518002F3A7D /* OpenSans-Bold.ttf in Resources */,
 				D739501B29ED8DBF000C4F78 /* LaunchScreen.storyboard in Resources */,
 				9CDCE6482A27AD40004055D8 /* Icons.xcassets in Resources */,
@@ -414,6 +440,8 @@
 				9CCE7D192A2505070037209E /* GetAppView.swift in Sources */,
 				9CDCE63D2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
 				9C28BFD72A331900000E5C34 /* UserProfileInputViewModel.swift in Sources */,
+				E8F8908D2AD3183E004BF6F0 /* AvailableRewardCardView.swift in Sources */,
+				E8F375642AD48CC300A2A30E /* UserDefaultsManager.swift in Sources */,
 				9C7369D12A323AC1001407ED /* UserProfileInputView.swift in Sources */,
 				E82A96102ACB9B10002F3A7D /* BackButton.swift in Sources */,
 				9CBFDFBE2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,
@@ -423,8 +451,11 @@
 				9C97557529FADBDC0051EF1F /* UIColor+Extension.swift in Sources */,
 				9C7369D42A323C4E001407ED /* GenderSelectionView.swift in Sources */,
 				9CDCE6432A27A94E004055D8 /* ApplyingRewardItemView.swift in Sources */,
+				E8F890842AD1B60C004BF6F0 /* InvocationURLModel.swift in Sources */,
+				E8F890902AD3229B004BF6F0 /* AvailableRewardsView.swift in Sources */,
 				9CCE7D1D2A250AF60037209E /* Color+Extension.swift in Sources */,
 				E82A960B2ACB9684002F3A7D /* Font+Extension.swift in Sources */,
+				E8F890932AD388F2004BF6F0 /* MerchantModel.swift in Sources */,
 				9CDCE6402A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDCE63E2A27A35E004055D8 /* ScanBarCodeView.swift in Sources */,
+				E8F890852AD1B60C004BF6F0 /* InvocationURLModel.swift in Sources */,
 				9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */,
 				D739501329ED8DBD000C4F78 /* ViewController.swift in Sources */,
 				E82A960C2ACB9684002F3A7D /* Font+Extension.swift in Sources */,
@@ -445,9 +477,13 @@
 				9C7369D22A323AC1001407ED /* UserProfileInputView.swift in Sources */,
 				E82A95F82ACAFEC8002F3A7D /* AppDelegate.swift in Sources */,
 				9C86D69D2A3EFCB100C00728 /* ApplyingRewardsViewModel.swift in Sources */,
+				E8F890912AD3229B004BF6F0 /* AvailableRewardsView.swift in Sources */,
+				E8F375652AD48CC300A2A30E /* UserDefaultsManager.swift in Sources */,
 				9CDCE6412A27A88D004055D8 /* ApplyingRewardsView.swift in Sources */,
 				9CCE7D202A2511460037209E /* Color+Extension.swift in Sources */,
+				E8F890942AD388F2004BF6F0 /* MerchantModel.swift in Sources */,
 				9CC67C802A338DBC0091A3D8 /* DatePickerView.swift in Sources */,
+				E8F8908E2AD3183E004BF6F0 /* AvailableRewardCardView.swift in Sources */,
 				E82A96112ACB9B11002F3A7D /* BackButton.swift in Sources */,
 				9CCE7D132A2503570037209E /* LordyalClipApp.swift in Sources */,
 				9CBFDFBF2A2CD4CD00ADB6B4 /* RedeemRewardView.swift in Sources */,

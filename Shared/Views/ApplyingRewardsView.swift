@@ -5,15 +5,16 @@
 //  Created by Nguyen Hoang Phuc on 31/05/2023.
 //
 
-import SwiftUI
+import SwiftUI 
+import Combine
 
 struct ApplyingRewardsView: View {
 
     private let twoColumnsLayout = [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)]
 
-    @ObservedObject var viewModel: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
-    
-    @Binding var merchantID: String
+    @StateObject var viewModel: ApplyingRewardsViewModel = ApplyingRewardsViewModel()
+    @ObservedObject var urlModel: InvocationURLModel
+    @State private var isRedeemable = false
 
     var body: some View {
         NavigationView {
@@ -22,7 +23,7 @@ struct ApplyingRewardsView: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
-                        Text("Select a reward\nto apply 3 points")
+                        Text("Select a reward\nto apply \(urlModel.points) point\(urlModel.points > 1 ? "s" : "")")
                             .font(.Title())
                             .foregroundColor(.boldGreen)
                             .font(.system(size: 30, weight: .black))
@@ -39,7 +40,6 @@ struct ApplyingRewardsView: View {
                         .padding(.horizontal, 20)
                     }
                 }
-                
                 VStack {
                     Spacer()
                     LinearGradient(
@@ -64,8 +64,9 @@ struct ApplyingRewardsView: View {
                         .buttonStyle(BackButton())
                         Spacer()
                         NavigationLink {
-                            if let selectedItem = viewModel.selectedItem?.toRewardModel() {
-                                RedeemRewardView(model: selectedItem)
+                            let selectedItem = viewModel.selectedItem
+                            if let selectedItem = selectedItem?.toRewardModel() {
+                                RedeemRewardView(model: selectedItem, urlModel: urlModel)
                                     .navigationBarBackButtonHidden()
                             }
                         } label: {
@@ -73,24 +74,33 @@ struct ApplyingRewardsView: View {
                         }
                         .buttonStyle(RoundButton())
                         .disabled(!viewModel.redeemEnabled)
+                        .simultaneousGesture(TapGesture().onEnded {
+                            let selectedItem = viewModel.selectedItem
+                            if selectedItem?.toRewardModel() != nil {
+                                if (!selectedItem!.isClaimable) {
+                                    selectedItem!.accumulatePoints(storeID: urlModel.storeID, orderID: urlModel.orderID, merchantID: urlModel.merchantID)
+                                }
+                            }
+                        })
                     }
-                    .padding(EdgeInsets(top: 0, leading: 50, bottom: 20, trailing: 50))
+                    .padding(EdgeInsets(top: 0, leading: 40, bottom: 20, trailing: 36))
+                }
+                if viewModel.isLoading {
+                    ProgressView() {
+                        Text("Getting rewards")
+                            .font(.Body())
+                    }
                 }
             }
         }
-        .onAppear {
-            print("Merchant ID (ApplyingView): \(merchantID)")
-            viewModel.getList(merchantID: merchantID)
-        }
-        .onChange(of: merchantID) { merchantID in
-            viewModel.getList(merchantID: merchantID)
+        .onChange(of: urlModel.merchantID) { merchantID in
+            viewModel.getList(merchantID: merchantID, points: urlModel.points)
         }
     }
 }
 
 struct ApplyingRewardsView_Previews: PreviewProvider {
-    @State static var merchant_id: String = "44"
     static var previews: some View {
-        ApplyingRewardsView(merchantID: $merchant_id)
+        ApplyingRewardsView(urlModel: InvocationURLModel())
     }
 }

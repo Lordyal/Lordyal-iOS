@@ -11,17 +11,18 @@ import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UserDefaultsManager.shared.set("218", forKey: UserDefaultsManager.Keys.userID) // for testing
         
-        guard let sharedUserDefaults = UserDefaults(suiteName: "group.lordyalapp.appClipMigration") else {
-            return true
+        if UserDefaultsManager.userID == nil {
+            UserDefaultsManager.userID = UUID().uuidString // change this to conform with BE
         }
-        
-        sharedUserDefaults.set("2", forKey: "user_id")
-        if sharedUserDefaults.string(forKey: "user_id") == nil {
-            sharedUserDefaults.set(UUID().uuidString, forKey: "user_id")
-        }
+        print("UserID: \(UserDefaultsManager.userID!)")
 
-        print(String(sharedUserDefaults.string(forKey: "user_id")!))
+        if let userProfile = UserDefaultsManager.userProfile {
+            print(userProfile)
+        } else {
+            print("No user profile")
+        }
         return true
     }
 }

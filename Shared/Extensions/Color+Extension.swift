@@ -24,4 +24,8 @@ extension Color {
     static var boldGreen: Color {
         Color("boldGreen")
     }
+    
+    static var mustard: Color {
+        Color("mustard")
+    }
 }

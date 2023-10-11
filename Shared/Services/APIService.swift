@@ -32,6 +32,28 @@ final class APIService {
 
         return try decoder.decode(T.self, from: data)
     }
+    
+    func post<T: Codable>(
+        _ url: URL,
+        body: Data? = nil,
+        headers: [String: String] = [:],
+        decoder: JSONDecoder = JSONDecoder()
+    ) async throws -> T {
+        var urlRequest = URLRequest(url: url, timeoutInterval: Double.infinity)
+        urlRequest.httpBody = body
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.httpMethod = "POST"
+        
+        let (data, response) = try await session.data(for: urlRequest)
+
+        guard let response = response as? HTTPURLResponse,
+              200...299 ~= response.statusCode else {
+            print(response)
+            throw URLError(.badServerResponse)
+        }
+
+        return try decoder.decode(T.self, from: data)
+    }
 }
 
 extension URL {
@@ -45,6 +67,10 @@ extension URL {
     ) -> URL {
         guard let baseURL = URL(string: urlString + version + path) else {
             fatalError()
+        }
+        
+        if queries == [:] {
+            return baseURL
         }
 
         let queryItems = queries.map { key, value in
@@ -68,6 +94,15 @@ enum APIVersion {
 }
 
 enum APIPath {
+    /* Rewards */
+    static let reward = "/rewards"
+    
+    /* User-Rewards */
+    static let userRewards = "/users/rewards"
     static let availableRewards = "/users/rewards/available"
     static let rewardAccumulation = "/users/rewards/accumulation"
+    static let redeemReward = "/users/rewards/redemption"
+
+    /* Merchants */
+    static let storeName = "/merchants"
 }

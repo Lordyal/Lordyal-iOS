@@ -13,7 +13,7 @@ struct BackButton: ButtonStyle {
             Image(systemName: "chevron.backward")
                 .font(.system(size: 22, weight: .semibold))
             configuration.label
-                .font(.SemiBold(relativeTo: .body))
+                .font(.SemiBold())
         }
         .foregroundColor(.boldGreen)
         .scaleEffect(configuration.isPressed ? 0.95 : 1.0)

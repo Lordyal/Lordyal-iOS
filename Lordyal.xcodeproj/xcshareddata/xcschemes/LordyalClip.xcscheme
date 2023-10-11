@@ -31,7 +31,7 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      appClipInvocationURLString = "https://api-dev.taperk.com?store_id=44"
+      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=X4QMX1631QJWA&amp;store_id=4&amp;merchant_id=32&amp;token=ABCDEFG123&amp;points=1"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -50,17 +50,10 @@
             ReferencedContainer = "container:Lordyal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "_XCAppClipURL"
-            value = "https://api-dev.taperk.com?store_id=44"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
-      appClipInvocationURLString = "https://api-dev.taperk.com?store_id=44"
+      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=X4QMX1631QJWA&amp;store_id=4&amp;merchant_id=32&amp;token=ABCDEFG123&amp;points=1"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"

@@ -20,10 +20,10 @@ struct LordyalClipApp: App {
 }
 
 struct ContentView: View {
-    @State var merchantID: String = ""
+    @StateObject var urlModel: InvocationURLModel = InvocationURLModel()
     
     var body: some View {
-        ApplyingRewardsView(merchantID: $merchantID)
+        ApplyingRewardsView(urlModel: urlModel)
             .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
     }
     
@@ -32,11 +32,22 @@ struct ContentView: View {
             let incomingURL = userActivity.webpageURL,
             let components = URLComponents(url: incomingURL, resolvingAgainstBaseURL: true),
             let queryItems = components.queryItems,
-            let id = queryItems.first(where: { $0.name == "store_id" })?.value
+            let order_id = queryItems.first(where: { $0.name == "order_id" })?.value,
+            let store_id = queryItems.first(where: { $0.name == "store_id" })?.value,
+            let merchant_id = queryItems.first(where: { $0.name == "merchant_id" })?.value,
+            let token = queryItems.first(where: { $0.name == "token" })?.value,
+            let points = queryItems.first(where: { $0.name == "points" })?.value
         else {
             return
         }
-        merchantID = String(id)
-        print(merchantID)
+        urlModel.orderID = order_id
+        urlModel.storeID = store_id
+        urlModel.merchantID = merchant_id
+        urlModel.token = token
+        urlModel.points = Int(points)!
+        getStoreName(merchantID: merchant_id) { name in
+            urlModel.storeName = name!
+        }
     }
 }
+

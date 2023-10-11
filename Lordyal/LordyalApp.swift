@@ -10,12 +10,10 @@ import SwiftUI
 @main
 struct LordyalApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-    // Fix if develop full app
-    @State var merchantID: String = ""
     
     var body: some Scene {
         WindowGroup {
-            ApplyingRewardsView(merchantID: $merchantID)
+            ApplyingRewardsView(urlModel: InvocationURLModel())
         }
     }
 }
