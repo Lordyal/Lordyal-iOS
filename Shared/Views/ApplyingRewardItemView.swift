@@ -22,7 +22,7 @@ struct ApplyingRewardItemView: View {
                 .cornerRadius(30)
             if model.selected {
                 RoundedRectangle(cornerRadius: 30)
-                    .stroke(Color.mediumGreen, lineWidth: 5)
+                    .stroke(Color(.mediumGreen), lineWidth: 5)
             }
             VStack {
                 HStack {
@@ -69,7 +69,10 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
                 title: "Free normal size Spaghetti",
                 imageURL: "",
                 collectedPoints: 4,
-                totalPoint: 6
+                totalPoint: 6,
+                storeName: "Taperk's Kitchen",
+                createdAt: "2023-06-24T21:11:47.283Z",
+                endAt: "2023-07-01T03:38:11.000Z"
             )
         )
         ApplyingRewardItemView(
@@ -79,7 +82,10 @@ struct ApplyingRewardItemView_Previews: PreviewProvider {
                 title: "Free normal size Spaghetti",
                 imageURL: "",
                 collectedPoints: 6,
-                totalPoint: 6
+                totalPoint: 6,
+                storeName: "Taperk's Kitchen",
+                createdAt: "2023-06-24T21:11:47.283Z",
+                endAt: "2023-07-01T03:38:11.000Z"
             )
         )
     }

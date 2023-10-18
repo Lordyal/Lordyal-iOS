@@ -36,9 +36,7 @@ func getStoreName(merchantID: String, completion: @escaping (String?) -> Void) {
                 queries: ["id": merchantID]
             )
 
-            let data: MerchantDataModel = try await APIService.shared.get(
-                url
-            )
+            let data: MerchantDataModel = try await APIService.shared.get(url)
 
             await MainActor.run {
                 if let storeName = data.data.first?.name {

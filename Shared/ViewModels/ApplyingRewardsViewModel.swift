@@ -28,7 +28,7 @@ class ApplyingRewardsViewModel: ObservableObject {
         redeemEnabled = selectedItem != nil
     }
 
-    func getList(merchantID: String, points: Int = 0) {
+    func getList(urlModel: InvocationURLModel) {
         Task {
             do {
                 DispatchQueue.main.async {
@@ -36,19 +36,19 @@ class ApplyingRewardsViewModel: ObservableObject {
                 }
                 let url = URL.buildURL(
                     path: APIPath.availableRewards,
-                    queries: ["user_id": UserDefaultsManager.userID, "merchant_id": merchantID]
+                    queries: ["user_id": UserDefaultsManager.userID, "merchant_id": urlModel.merchantID]
                 )
 
                 let data: AvailableRewardDataModel = try await APIService.shared.get(url)
 
                 await MainActor.run {
-                    items = data.data.map { $0.convertToItemModel(points: points) }
+                    items = data.data.map { $0.convertToItemModel(points: urlModel.points, storeName: urlModel.storeName) }
                     DispatchQueue.main.async {
                         self.isLoading = false
                     }
                 }
             } catch {
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
@@ -93,7 +93,9 @@ struct ApplyingRewardItemModel: Identifiable {
     var imageURL: String
     var collectedPoints: Int
     var totalPoint: Int
-    var storeName: String = "Taperk's Kitchen"
+    var storeName: String
+    var createdAt: String
+    var endAt: String
 
     var id: String {
         "\(rewardID)\(selected)"
@@ -114,7 +116,9 @@ struct ApplyingRewardItemModel: Identifiable {
             totalPoints: totalPoint,
             storeName: storeName,
             rewardDescription: title,
-            imageURL: imageURL
+            imageURL: imageURL,
+            createdAt: createdAt,
+            endAt: endAt
         )
     }
 
@@ -138,13 +142,12 @@ struct ApplyingRewardItemModel: Identifiable {
                 let url = URL.buildURL(
                     path: APIPath.rewardAccumulation
                 )
-                let params = "{\"reward_id\": \"\(rewardID)\", \"store_id\": \"\(storeID)\", \"order_id\": \"\(orderID)\", \"merchant_id\": \"\(merchantID)\", \"user_id\": \"\(UserDefaultsManager.userID!)\"}"
-                let body = params.data(using: .utf8)
-                print(String(data: body!, encoding: .utf8)!)
+                let body: [String: Any] = ["reward_id": rewardID, "store_id": storeID, "order_id": orderID, "merchant_id": merchantID, "user_id": UserDefaultsManager.userID!]
+                let jsonData = try? JSONSerialization.data(withJSONObject: body)
 
-                let _: AvailableRewardItemDataModel = try await APIService.shared.post(
+                let _: AvailableRewardDataModel = try await APIService.shared.post(
                     url,
-                    body: body
+                    body: jsonData
                 )
 
                 await MainActor.run {
@@ -170,9 +173,11 @@ struct AvailableRewardItemDataModel: Codable {
     let description: String
     let isActive: Bool
     let merchantId: Int
-    let imageURL: String?
+    let imageURL: String
     let redeemPoints: Int
     let pointsAccumulated: Int
+    let createdAt: String
+    let endAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -185,6 +190,8 @@ struct AvailableRewardItemDataModel: Codable {
         case imageURL = "image_url"
         case redeemPoints = "redeem_points"
         case pointsAccumulated = "points_accumulated"
+        case createdAt = "created_at"
+        case endAt = "duration_end_date"
     }
 
     init(from decoder: Decoder) throws {
@@ -196,19 +203,23 @@ struct AvailableRewardItemDataModel: Codable {
         self.description = try container.decode(String.self, forKey: .description)
         self.isActive = try container.decode(Bool.self, forKey: .isActive)
         self.merchantId = try container.decode(Int.self, forKey: .merchantId)
-        self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL)
+        self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL) ?? ""
         self.redeemPoints = try container.decodeIfPresent(Int.self, forKey: .redeemPoints) ?? 0
         self.pointsAccumulated = try container.decodeIfPresent(Int.self, forKey: .pointsAccumulated) ?? 0
+        self.createdAt = try container.decode(String.self, forKey: .createdAt)
+        self.endAt = try container.decodeIfPresent(String.self, forKey: .endAt)
     }
-
-    func convertToItemModel(points: Int = 0) -> ApplyingRewardItemModel {
+    
+    func convertToItemModel(points: Int = 0, storeName: String) -> ApplyingRewardItemModel {
         ApplyingRewardItemModel(
             rewardID: id,
-            title: description,
-            imageURL: imageURL ?? "",
+            title: name,
+            imageURL: imageURL,
             collectedPoints: pointsAccumulated + points,
             totalPoint: redeemPoints,
-            storeName: name
+            storeName: storeName,
+            createdAt: createdAt,
+            endAt: endAt ?? ""
         )
     }
 }
@@ -238,6 +249,7 @@ struct UserRewardModel: Codable {
     }
     
     func getReward(rewardID: Int, urlModel: InvocationURLModel, completion: @escaping (ApplyingRewardItemModel?) -> Void) {
+        // FIXME: filter the ID
 //        if (id != rewardID && merchantID == Int(urlModel.merchantID) && storeID == Int(urlModel.storeID) && !isRedeemed) {
         if (merchantID == Int(urlModel.merchantID) && storeID == Int(urlModel.storeID) && !isRedeemed) {
             Task {
@@ -250,14 +262,14 @@ struct UserRewardModel: Codable {
                     let data: AvailableRewardDataModel = try await APIService.shared.get(url)
 
                     await MainActor.run {
-                        if let reward = data.data.first?.convertToItemModel(points: pointsAccumulated) {
+                        if let reward = data.data.first?.convertToItemModel(points: pointsAccumulated, storeName: urlModel.storeName) {
                             completion(reward)
                         } else {
                             completion(nil)
                         }
                     }
                 } catch {
-                    print(error.localizedDescription)
+                    print(error)
                     completion(nil)
                 }
             }
@@ -278,6 +290,8 @@ struct RewardModel {
     var storeName: String
     var rewardDescription: String
     var imageURL: String = ""
+    var createdAt: String
+    var endAt: String
 
     var isClaimable: Bool {
         points == totalPoints
@@ -293,16 +307,11 @@ struct RewardModel {
                 let body: [String: Any] = ["user_id": UserDefaultsManager.userID!, "merchant_id": merchantID, "store_id": storeID, "reward_id": String(id)]
                 let jsonData = try? JSONSerialization.data(withJSONObject: body)
                 
-                var headers = [String: String]()
-                headers["Content-Type"] = "application/json"
-                headers["Content-Length"] = String(describing: jsonData!.count)
-                
-                let _: AvailableRewardItemDataModel = try await APIService.shared.post(
+                let _: AvailableRewardDataModel = try await APIService.shared.post(
                     url,
-                    body: jsonData,
-                    headers: headers
+                    body: jsonData
                 )
-                
+            
                 await MainActor.run {
                     
                 }

@@ -10,24 +10,32 @@ import SwiftUI
 import PhoneNumberKit
 
 struct UserProfileInputView: View {
+    @EnvironmentObject var urlModel: InvocationURLModel
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: UserProfileInputViewModel
-    let rewardModel: RewardModel
-    @ObservedObject var urlModel: InvocationURLModel
     @State var date = Date()
+    @State var dateText: String = ""
+    @State var prevText: String = ""
+    @State var isInvalid = false
     @State var showDatePicker = false
+    let rewardModel: RewardModel
     var phoneNumberKit = PhoneNumberKit()
 
     func testPhone() {
         print(phoneNumberKit.countryCode(for: "VN") ?? 0)
     }
 
+    var df: DateFormatter {
+        let df = DateFormatter()
+        df.dateFormat = "MM / dd / yyyy"
+        return df
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.lightGreen
                     .ignoresSafeArea()
-
                 VStack {
                     Spacer().frame(height: 30)
                     Text("To redeem your reward and make sure you receive the best personalized offers, we want to know more about you.")
@@ -58,33 +66,78 @@ struct UserProfileInputView: View {
                         }
                     }
 
-                    Group {
-                        Spacer().frame(height: 24)
-                        Text("Date of Birth")
-                            .font(.Bold())
-                            .foregroundColor(.boldGreen)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, -1)
-                        Text(date, style: .date)
-                            .font(.SemiBold())
-                            .foregroundColor(.boldGreen)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                    .cornerRadius(48)
-                                    .shadow(color: .gray.opacity(0.3), radius: 10)
-                        }
+                    Spacer().frame(height: 24)
+                    Text("Date of Birth")
+                        .font(.Bold())
+                        .foregroundColor(.boldGreen)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, -1)
+                    ZStack {
+                        TextField(
+                            "MM / DD / YYYY",
+                            text: $dateText,
+                            onCommit: {
+                                if let d = df.date(from: dateText) {
+                                    date = d
+                                } else {
+                                    isInvalid = true
+                                }
+                            }
+                        )
+                        .keyboardType(.numberPad)
                         .onTapGesture {
-                            withAnimation {
-                                showDatePicker.toggle()
+                            isInvalid = false
+                        }
+                        .onChange(of: dateText) { new in
+                            let size = new.count
+                            if size < prevText.count {
+                                if size == 4 || size == 9 {
+                                    dateText.removeLast(4)
+                                    prevText = dateText
+                                }
+                            }
+                            if size > 14 {
+                                dateText = String(dateText.prefix(14))
+                                prevText = dateText
+                            }
+                            else if size == 2 || size == 7 {
+                                dateText += " / "
+                                prevText = dateText
+                            }
+                            if let d = df.date(from: dateText) {
+                                date = d
                             }
                         }
-//                        .sheet(isPresented: $showDatePicker) {
-//                            DatePickerView(date: $date, show: $showDatePicker)
-//                                .presentationDetents([.medium])
-//                        }
+                        HStack {
+                            Spacer()
+                            Button {
+                                showDatePicker.toggle()
+                            } label: {
+                                Image(systemName: "calendar")
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
+                            .padding(.trailing, 5)
+                        }
+                    }
+                    .font(.SemiBold())
+                    .foregroundColor(.boldGreen)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .background {
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .cornerRadius(48)
+                            .shadow(color: .gray.opacity(0.3), radius: 10)
+                    }
+                    
+                    if (isInvalid) {
+                        Text("Enter a valid date")
+                            .font(.Body())
+                            .foregroundColor(.mediumGreen)
+                            .onAppear {
+                                dateText = ""
+                            }
                     }
 
                     Group {
@@ -142,7 +195,7 @@ struct UserProfileInputView: View {
                         Spacer()
                         NavigationLink {
                             if viewModel.isFilled() {
-                                ScanBarCodeView()
+                                ScanBarCodeView(reward: rewardModel)
                                     .navigationBarBackButtonHidden()
                             }
                         } label: {
@@ -152,7 +205,7 @@ struct UserProfileInputView: View {
                         .simultaneousGesture(TapGesture().onEnded{
                             viewModel.dateOfBirth = date
                             if let userProfile = viewModel.toUserProfileModel() {
-                                userProfile.saveUserProfile()
+                                userProfile.saveUserProfile(loginToken: urlModel.loginToken)
                             }
                             rewardModel.redeemReward(merchantID: urlModel.merchantID, storeID: urlModel.storeID)
                         })
@@ -172,6 +225,7 @@ struct UserProfileInputView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .tint(.boldGreen)
     }
 }
 
@@ -181,13 +235,15 @@ struct UserProfileInputView_Previews: PreviewProvider {
             viewModel: UserProfileInputViewModel(),
             rewardModel: RewardModel(
                 id: 1,
-                points: 5,
+                points: 6,
                 totalPoints: 6,
                 storeName: "Taperk's Kitchen",
-                rewardDescription: "Free Normal Size Spaghetti"
-            ),
-            urlModel: InvocationURLModel()
+                rewardDescription: "Free Normal Size Spaghetti",
+                createdAt: "2023-06-24T21:11:47.283Z",
+                endAt: "2023-07-01T03:38:11.000Z"
+            )
         )
+        .environmentObject(InvocationURLModel.shared)
     }
 }
 

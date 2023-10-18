@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AvailableRewardsView: View {
     private let width = UIScreen.main.bounds.width
+    @EnvironmentObject var urlModel: InvocationURLModel
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: ApplyingRewardsViewModel
-    @ObservedObject var urlModel: InvocationURLModel 
     @Binding var reward: RewardModel 
     @Binding var isLoading: Bool
     
@@ -30,6 +30,7 @@ struct AvailableRewardsView: View {
                             .padding(.bottom, 5)
                         if isLoading {
                             ProgressView()
+                                .tint(.boldGreen)
                         } else {
                             ForEach(viewModel.items) { item in
                                 AvailableRewardCardView(model: item)
@@ -37,11 +38,12 @@ struct AvailableRewardsView: View {
                                         presentationMode.wrappedValue.dismiss()
                                         reward = item.toRewardModel()
                                     }
+                                    .frame(height: 100)
                             }
                             .padding(.bottom, 2)
-                            Text("Comeback to \(urlModel.storeName) to get more!")
+                            Text("Comeback to \(urlModel.storeName) to get more rewards!")
                                 .font(.SemiBold())
-                                .foregroundColor(Color(.boldGreen))
+                                .foregroundColor(.boldGreen)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: width - 80)
@@ -59,9 +61,17 @@ struct AvailableRewardsView_Previews: PreviewProvider {
     static var previews: some View {
         AvailableRewardsView(
             viewModel: ApplyingRewardsViewModel(),
-            urlModel: InvocationURLModel(),
-            reward: .constant(RewardModel(id: 1, points: 5, totalPoints: 10, storeName: "Starbucks", rewardDescription: "Caramel Machiato")),
+            reward: .constant(RewardModel(
+                id: 1,
+                points: 5,
+                totalPoints: 6,
+                storeName: "Taperk's Kitchen",
+                rewardDescription: "Free Normal Size Spaghetti",
+                createdAt: "2023-06-24T21:11:47.283Z",
+                endAt: "2023-07-01T03:38:11.000Z"
+            )),
             isLoading: .constant(true)
         )
+        .environmentObject(InvocationURLModel.shared)
     }
 }

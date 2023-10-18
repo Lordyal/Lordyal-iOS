@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class APIService {
     static let shared = APIService()
     let session = URLSession.shared
@@ -22,7 +21,9 @@ final class APIService {
         var urlRequest = URLRequest(url: url)
         urlRequest.allHTTPHeaderFields = headers
         urlRequest.httpMethod = "GET"
-
+        
+        print(url)
+        
         let (data, response) = try await session.data(for: urlRequest)
 
         guard let response = response as? HTTPURLResponse,
@@ -36,13 +37,21 @@ final class APIService {
     func post<T: Codable>(
         _ url: URL,
         body: Data? = nil,
+        method: String = "POST",
         headers: [String: String] = [:],
-        decoder: JSONDecoder = JSONDecoder()
+        decoder: JSONDecoder = JSONDecoder(),
+        token: String = ""
     ) async throws -> T {
         var urlRequest = URLRequest(url: url, timeoutInterval: Double.infinity)
         urlRequest.httpBody = body
-        urlRequest.allHTTPHeaderFields = headers
-        urlRequest.httpMethod = "POST"
+        urlRequest.httpMethod = method
+        
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(String(describing: body!.count), forHTTPHeaderField: "Content-Length")
+        
+        if !token.isEmpty {
+            urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
         
         let (data, response) = try await session.data(for: urlRequest)
 
@@ -94,8 +103,16 @@ enum APIVersion {
 }
 
 enum APIPath {
+    /* Auth */
+    static let auth = "/auth/sign-in"
+    static let signUp = "/auth/sign-up"
+    
+    /* Users*/
+    static let userInfo = "/users"
+    
     /* Rewards */
     static let reward = "/rewards"
+    static let rewardBarcode = "/rewards/barcodes"
     
     /* User-Rewards */
     static let userRewards = "/users/rewards"
@@ -106,3 +123,4 @@ enum APIPath {
     /* Merchants */
     static let storeName = "/merchants"
 }
+

@@ -15,7 +15,7 @@ struct BackButton: ButtonStyle {
             configuration.label
                 .font(.SemiBold())
         }
-        .foregroundColor(.boldGreen)
+        .foregroundColor(Color(.boldGreen))
         .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
     }
 }
