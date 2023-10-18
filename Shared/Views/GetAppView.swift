@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct GetAppView: View {
-    var test = "test"
+    @State private var showDownloadLink = false
     var body: some View {
         ZStack {
             Color.lightGreen.ignoresSafeArea()
@@ -21,18 +22,18 @@ struct GetAppView: View {
                     path.addQuadCurve(to: CGPoint(x: width, y: height), control: CGPoint(x: width / 2, y: height - 60))
                     path.addLine(to: CGPoint(x: width, y: reader.size.height))
                 }
-                .fill(Color.mediumGreen)
+                .fill(Color(.mediumGreen))
             }
             .ignoresSafeArea()
             VStack {
                 Spacer()
                     .frame(height: 40)
-                Text("Don't miss our app")
-                    .foregroundColor(Color.boldGreen)
+                Text("Don't miss our app!")
+                    .foregroundColor(.boldGreen)
                     .font(.Title())
                     .padding(.bottom, 4)
                 Text("To track more of your rewards and earn more offers, download Taperk today!")
-                    .foregroundColor(Color.mediumGreen)
+                    .foregroundColor(.mediumGreen)
                     .font(.Body())
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
@@ -47,7 +48,9 @@ struct GetAppView: View {
                     Spacer()
                         .frame(width: 64)
                     Button {
-                        // TODO: Handle open later
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                        }
                     } label: {
                         Text("Later")
                             .foregroundColor(.white)
@@ -55,7 +58,7 @@ struct GetAppView: View {
                     }
                     Spacer()
                     Button {
-
+                        showDownloadLink.toggle()
                     } label: {
                         Text("Download")
                     }
@@ -67,6 +70,10 @@ struct GetAppView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .appStoreOverlay(isPresented: $showDownloadLink) {
+            // TODO: check Apple's identifier
+            SKOverlay.AppConfiguration(appIdentifier: "YPN388FR66", position: .bottom)
+        }
     }
 }
 

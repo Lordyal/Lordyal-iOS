@@ -20,7 +20,7 @@ struct DatePickerView: View {
                 } label: {
                     Text("Done")
                         .font(.SemiBold())
-                        .foregroundColor(Color(.mediumGreen))
+                        .foregroundColor(.mediumGreen)
                         .padding(.trailing, 10)
                 }
                 
@@ -28,8 +28,8 @@ struct DatePickerView: View {
                     Text(date, style: .date)
                 }
                 .datePickerStyle(GraphicalDatePickerStyle())
-                .tint(Color(.boldGreen))
-                .colorInvert().colorMultiply(Color(.mediumGreen))
+                .tint(.boldGreen)
+                .colorInvert().colorMultiply(.mediumGreen)
             }
             .padding()
         }

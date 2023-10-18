@@ -31,7 +31,7 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=X4QMX1631QJWA&amp;store_id=4&amp;merchant_id=32&amp;token=ABCDEFG123&amp;points=1"
+      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=Y2J47GHB4WATG&amp;store_id=1&amp;merchant_id=44&amp;token=ABCDEFG123&amp;points=5"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -53,7 +53,7 @@
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
-      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=X4QMX1631QJWA&amp;store_id=4&amp;merchant_id=32&amp;token=ABCDEFG123&amp;points=1"
+      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=Y2J47GHB4WATG&amp;store_id=1&amp;merchant_id=44&amp;token=ABCDEFG123&amp;points=5"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"

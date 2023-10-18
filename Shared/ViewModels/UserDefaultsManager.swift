@@ -30,7 +30,6 @@ struct UserDefaultsManager {
             return shared.string(forKey: Keys.userID)
         }
         set {
-            // TODO: make sure userID is unique (API?)
             shared.set(newValue, forKey: Keys.userID)
         }
     }
@@ -38,7 +37,7 @@ struct UserDefaultsManager {
     static var userProfile: UserProfileModel? {
         get {
             if let userProfileData = shared.data(forKey: Keys.userProfile) {
-                return try! JSONDecoder().decode(UserProfileModel.self, from: userProfileData)
+                return try? JSONDecoder().decode(UserProfileModel.self, from: userProfileData)
             } else {
                 return nil
             }
@@ -46,7 +45,6 @@ struct UserDefaultsManager {
         set {
             do {
                 let newData = try JSONEncoder().encode(newValue)
-                print(String(data: newData, encoding: .utf8)!)
                 shared.set(newData, forKey: Keys.userProfile)
             } catch {
                 print(error)

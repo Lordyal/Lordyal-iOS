@@ -9,21 +9,32 @@ import SwiftUI
 
 @main
 struct LordyalClipApp: App {
+    init() {
+        /* FOR TESTING */
+//        UserDefaultsManager.userID = nil 
+        UserDefaultsManager.shared.set("317", forKey: UserDefaultsManager.Keys.userID)
+        UserDefaultsManager.userProfile = nil
+        
+        AuthManager.shared.initApp()
+    }
     
-    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+    @StateObject var urlModel: InvocationURLModel = InvocationURLModel.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(urlModel)
         }
     }
 }
 
 struct ContentView: View {
-    @StateObject var urlModel: InvocationURLModel = InvocationURLModel()
+    @EnvironmentObject var urlModel: InvocationURLModel
     
     var body: some View {
-        ApplyingRewardsView(urlModel: urlModel)
+        ApplyingRewardsView()
+            .environmentObject(AuthManager.shared)
+            .environmentObject(urlModel)
             .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
     }
     
@@ -46,7 +57,10 @@ struct ContentView: View {
         urlModel.token = token
         urlModel.points = Int(points)!
         getStoreName(merchantID: merchant_id) { name in
-            urlModel.storeName = name!
+            urlModel.storeName = name ?? ""
+        }
+        AuthManager.shared.auth(username: "duy", password: "123456") { token in
+            urlModel.loginToken = token ?? ""
         }
     }
 }
