@@ -11,9 +11,10 @@ import SwiftUI
 struct LordyalApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     
+    @StateObject var urlModel: InvocationURLModel = InvocationURLModel.shared
     var body: some Scene {
         WindowGroup {
-            ApplyingRewardsView(urlModel: InvocationURLModel())
+            ApplyingRewardsView().environmentObject(urlModel)
         }
     }
 }

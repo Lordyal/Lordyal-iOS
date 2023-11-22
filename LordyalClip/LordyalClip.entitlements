@@ -5,6 +5,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>appclips:lordyal-ios-app.web.app</string>
+		<string>appclips:https://api-dev.taperk.com</string>
 	</array>
 	<key>com.apple.developer.parent-application-identifiers</key>
 	<array>

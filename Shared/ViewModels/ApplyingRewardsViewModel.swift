@@ -17,7 +17,8 @@ class ApplyingRewardsViewModel: ObservableObject {
         items.first { $0.selected }
     }
 
-    func selectItem(_ item: ApplyingRewardItemModel) {
+    func selectItem(item: ApplyingRewardItemModel) {
+        debugPrint("------------------", item.title)
         items = items.map {
             if item.id == $0.id {
                 return $0.toggle()

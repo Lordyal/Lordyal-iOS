@@ -47,7 +47,8 @@ struct ApplyingRewardsView: View {
                                     ApplyingRewardItemView(model: item)
                                         .frame(height: 210)
                                         .onTapGesture {
-                                            viewModel.selectItem(item)
+                                            print(item)
+                                            viewModel.selectItem(item: item)
                                         }
                                 }
                             }
@@ -122,10 +123,10 @@ struct ApplyingRewardsView: View {
     }
 }
 
-struct ApplyingRewardsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ApplyingRewardsView()
-            .environmentObject(AuthManager.shared)
-            .environmentObject(InvocationURLModel.shared)
-    }
-}
+//struct ApplyingRewardsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ApplyingRewardsView()
+//            .environmentObject(AuthManager.shared)
+//            .environmentObject(InvocationURLModel.shared)
+//    }
+//}
