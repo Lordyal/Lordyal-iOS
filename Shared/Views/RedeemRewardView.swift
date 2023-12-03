@@ -53,12 +53,18 @@ struct RedeemRewardView: View {
                         }
 
                         ZStack {
-                            let width = proxy.size.width - 80
-                            AsyncImage(url: URL(string: model.imageURL))
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: width, height: width)
-                                .cornerRadius(48)
-                                .clipped()
+                            let constant = proxy.size.width - 80
+                            AsyncImage(url: URL(string: model.imageURL)) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: constant, height: constant)
+                                    .cornerRadius(48)
+                                    .clipped()
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
                                 .cornerRadius(48)
 

@@ -18,7 +18,6 @@ class ApplyingRewardsViewModel: ObservableObject {
     }
 
     func selectItem(item: ApplyingRewardItemModel) {
-        debugPrint("------------------", item.title)
         items = items.map {
             if item.id == $0.id {
                 return $0.toggle()
@@ -87,7 +86,7 @@ class ApplyingRewardsViewModel: ObservableObject {
     }
 }
 
-struct ApplyingRewardItemModel: Identifiable {
+struct ApplyingRewardItemModel: Identifiable, Hashable {
     let rewardID: Int
     var selected: Bool = false
     var title: String
@@ -98,8 +97,8 @@ struct ApplyingRewardItemModel: Identifiable {
     var createdAt: String
     var endAt: String
 
-    var id: String {
-        "\(rewardID)\(selected)"
+    var id: Int {
+        rewardID
     }
 
     var selectedIconName: String {
