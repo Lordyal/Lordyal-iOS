@@ -12,50 +12,56 @@ struct ApplyingRewardItemView: View {
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                AsyncImage(url: URL(string: model.imageURL))
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: proxy.size.width, height: proxy.size.height)
-                    .cornerRadius(30.0)
-                    .clipped()
-            }
-            LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
-                .cornerRadius(30)
-            if model.selected {
-                RoundedRectangle(cornerRadius: 30)
-                    .stroke(Color(.mediumGreen), lineWidth: 5)
-            }
-            VStack {
-                HStack {
-                    if model.selected {
-                        Image("checked")
-                    } else {
-                        Image("unchecked")
+                AsyncImage(url: URL(string: model.imageURL)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .cornerRadius(30.0)
+                        .clipped()
+                } placeholder: {
+                    ProgressView()
+                }
+                
+                LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+                    .cornerRadius(30)
+                if model.selected {
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color(.mediumGreen), lineWidth: 5)
+                }
+                
+                VStack {
+                    HStack {
+                        if model.selected {
+                            Image("checked")
+                        } else {
+                            Image("unchecked")
+                        }
+                        Spacer()
+                        HStack {
+                            Image(model.isClaimable ? "claim" : "unclaim")
+                                .resizable()
+                                .frame(width: 18, height: 18)
+                            Text("\(model.collectedPoints)/\(model.totalPoint)")
+                                .font(.Bold(size: 12))
+                                .foregroundColor(model.isClaimable ? .white : .boldGreen)
+                        }
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8)
+                        .background {
+                            Rectangle()
+                                .foregroundColor(model.isClaimable ? .yellow : .white)
+                                .cornerRadius(25)
+                        }
                     }
                     Spacer()
-                    HStack {
-                        Image(model.isClaimable ? "claim" : "unclaim")
-                            .resizable()
-                            .frame(width: 18, height: 18)
-                        Text("\(model.collectedPoints)/\(model.totalPoint)")
-                            .font(.Bold(size: 12))
-                            .foregroundColor(model.isClaimable ? .white : .boldGreen)
-                    }
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 8)
-                    .background {
-                        Rectangle()
-                            .foregroundColor(model.isClaimable ? .yellow : .white)
-                            .cornerRadius(25)
-                    }
+                    Text(model.title)
+                        .foregroundColor(.white)
+                        .font(.Bold(size: 12))
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
                 }
-                Spacer()
-                Text(model.title)
-                    .foregroundColor(.white)
-                    .font(.Bold(size: 12))
-                    .lineLimit(2)
-                    .multilineTextAlignment(.center)
+                .padding()
             }
-            .padding()
         }
     }
 }
