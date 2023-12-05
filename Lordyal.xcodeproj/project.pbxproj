@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824909F02B1EAB5100355DC1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 824909EF2B1EAB5100355DC1 /* Kingfisher */; };
+		824909F22B1EAB9C00355DC1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 824909F12B1EAB9C00355DC1 /* Kingfisher */; };
 		9C21DFA22A55B9A9009C1C52 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CD5592A52BC1800D66E6C /* APIService.swift */; };
 		9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */; };
 		9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */; };
@@ -156,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824909F02B1EAB5100355DC1 /* Kingfisher in Frameworks */,
 				9CB354FD29F973DB00326449 /* SnapKit in Frameworks */,
 				9C28BFCF2A3313B1000E5C34 /* PhoneNumberKit in Frameworks */,
 			);
@@ -165,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824909F22B1EAB9C00355DC1 /* Kingfisher in Frameworks */,
 				9CB3550429F975B200326449 /* SnapKit in Frameworks */,
 				9C28BFD52A3313C8000E5C34 /* PhoneNumberKit in Frameworks */,
 			);
@@ -331,6 +335,7 @@
 			packageProductDependencies = (
 				9CB354FC29F973DB00326449 /* SnapKit */,
 				9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */,
+				824909EF2B1EAB5100355DC1 /* Kingfisher */,
 			);
 			productName = Lordyal;
 			productReference = D7394FF129ED8BBD000C4F78 /* Lordyal.app */;
@@ -353,6 +358,7 @@
 			packageProductDependencies = (
 				9CB3550329F975B200326449 /* SnapKit */,
 				9C28BFD42A3313C8000E5C34 /* PhoneNumberKit */,
+				824909F12B1EAB9C00355DC1 /* Kingfisher */,
 			);
 			productName = LordyalClip;
 			productReference = D739500C29ED8DBD000C4F78 /* LordyalClip.app */;
@@ -388,6 +394,7 @@
 			packageReferences = (
 				9CB354FB29F973DB00326449 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				824909EE2B1EAA6900355DC1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D7394FF229ED8BBD000C4F78 /* Products */;
 			projectDirPath = "";
@@ -733,11 +740,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
+				DEVELOPMENT_TEAM = YPN388FR66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LordyalClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Taperk;
@@ -755,7 +760,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal.Appclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = dev_lordyal_appclip;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -770,11 +774,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LordyalClip/LordyalClip.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = YPN388FR66;
+				DEVELOPMENT_TEAM = YPN388FR66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LordyalClip/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Taperk;
@@ -792,7 +794,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.lordyal.Appclip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pro_lordyal_appclip;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -832,6 +833,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		824909EE2B1EAA6900355DC1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 		9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
@@ -851,6 +860,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		824909EF2B1EAB5100355DC1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 824909EE2B1EAA6900355DC1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		824909F12B1EAB9C00355DC1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 824909EE2B1EAA6900355DC1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		9C28BFCE2A3313B1000E5C34 /* PhoneNumberKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9C28BFCD2A3313B1000E5C34 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
