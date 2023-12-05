@@ -6,21 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
+
 
 struct ApplyingRewardItemView: View {
     let model: ApplyingRewardItemModel
     var body: some View {
         ZStack {
-            GeometryReader { proxy in
-                AsyncImage(url: URL(string: model.imageURL)) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: proxy.size.width, height: proxy.size.height)
-                        .cornerRadius(30.0)
-                        .clipped()
-                } placeholder: {
-                    ProgressView()
-                }
+            GeometryReader { proxy in                
+                KFImage(URL(string: model.imageURL))
+                    .placeholder {ProgressView()}
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+                    .cornerRadius(30.0)
+                    .clipped()
                 
                 LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
                     .cornerRadius(30)
