@@ -14,7 +14,9 @@ struct LordyalApp: App {
     @StateObject var urlModel: InvocationURLModel = InvocationURLModel.shared
     var body: some Scene {
         WindowGroup {
-            ApplyingRewardsView().environmentObject(urlModel)
+            ApplyingRewardsView()
+                .environmentObject(AuthManager.shared)
+                .environmentObject(urlModel)
         }
     }
 }
