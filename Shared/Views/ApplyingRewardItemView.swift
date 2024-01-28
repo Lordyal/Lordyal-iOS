@@ -13,7 +13,7 @@ struct ApplyingRewardItemView: View {
     let model: ApplyingRewardItemModel
     var body: some View {
         ZStack {
-            GeometryReader { proxy in                
+            GeometryReader { proxy in
                 KFImage(URL(string: model.imageURL))
                     .placeholder {ProgressView()}
                     .resizable()
@@ -21,14 +21,14 @@ struct ApplyingRewardItemView: View {
                     .frame(width: proxy.size.width, height: proxy.size.height)
                     .cornerRadius(30.0)
                     .clipped()
-                
+
                 LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
                     .cornerRadius(30)
                 if model.selected {
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color(.mediumGreen), lineWidth: 5)
                 }
-                
+
                 VStack {
                     HStack {
                         if model.selected {

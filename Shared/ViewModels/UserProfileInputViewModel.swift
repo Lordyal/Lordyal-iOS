@@ -31,25 +31,25 @@ class UserProfileInputViewModel: ObservableObject {
 
         selectedGender = nil
     }
-    
+
     func isFilled() -> Bool {
         return (dateOfBirth != nil) && !phoneNumber.isEmpty && (selectedGender != nil)
     }
-    
+
     func toUserProfileModel() -> UserProfileModel? {
         if !isFilled() {
             return nil
         }
-        
+
         let dateOfBirth = dateOfBirth!
         let selectedGender = selectedGender!
-        
+
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let dob: String = formatter.string(from: dateOfBirth)
-        
+
         let gender: String = selectedGender.label.uppercased()
-        
+
         return UserProfileModel(dateOfBirth: dob, phoneNumber: phoneNumber, selectedGender: gender)
     }
 }
@@ -64,14 +64,14 @@ struct UserProfileItemModel: Codable {
     let dateOfBirth: String
     let phoneNumber: String
     let selectedGender: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case dateOfBirth
         case phoneNumber = "phone_number"
         case selectedGender = "gender"
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
@@ -85,12 +85,12 @@ struct UserProfileModel: Codable {
     let dateOfBirth: String
     let phoneNumber: String
     let selectedGender: String
-    
+
     func saveUserProfile(loginToken: String) {
         if UserDefaultsManager.userProfile == nil {
             UserDefaultsManager.userProfile = self
         }
-        
+
         Task {
             do {
                 let url = URL.buildURL(
@@ -99,16 +99,16 @@ struct UserProfileModel: Codable {
                 // TODO: missing DOB
                 let body: [String: Any] = ["id": UserDefaultsManager.userID!, "gender": selectedGender, "phone_number": phoneNumber]
                 let jsonData = try? JSONSerialization.data(withJSONObject: body)
-                
+
                 let _: UserProfileDataModel = try await APIService.shared.post(
                     url,
                     body: jsonData,
                     method: "PUT",
                     token: loginToken
                 )
-                
+
                 await MainActor.run {
-                    
+
                 }
             } catch {
                 print(error)

@@ -95,7 +95,7 @@ struct RedeemRewardView: View {
                                 Text("Redeem now?")
                                     .foregroundColor(.boldGreen)
                                     .font(.SemiBold(size: 20))
-                                Text("Coupon will expire within 5 minutes\nof redemption time.")
+                                Text("Coupon will expire within **5 minutes**\nof redemption time.")
                                     .font(.Body(size: 16))
                                     .foregroundColor(.mediumGreen)
                             }
