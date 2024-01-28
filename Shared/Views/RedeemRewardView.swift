@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Kingfisher
+
 
 struct RedeemRewardView: View {
     @EnvironmentObject var urlModel: InvocationURLModel
@@ -53,10 +55,12 @@ struct RedeemRewardView: View {
                         }
 
                         ZStack {
-                            let width = proxy.size.width - 80
-                            AsyncImage(url: URL(string: model.imageURL))
+                            let constant = proxy.size.width - 80
+                            KFImage(URL(string: model.imageURL))
+                                .placeholder {ProgressView()}
+                                .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: width, height: width)
+                                .frame(width: constant, height: constant)
                                 .cornerRadius(48)
                                 .clipped()
                             LinearGradient(gradient: Gradient(colors: [.clear, .clear, .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)

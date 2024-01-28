@@ -10,7 +10,7 @@ import Foundation
 class InvocationURLModel: ObservableObject {
     static let shared = InvocationURLModel()
     
-    private init() {}
+    init() {}
 
     @Published var orderID: String = ""
     @Published var storeID: String = ""

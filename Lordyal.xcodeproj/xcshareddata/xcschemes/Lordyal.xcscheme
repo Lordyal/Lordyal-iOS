@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1430"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D739500B29ED8DBD000C4F78"
-               BuildableName = "LordyalClip.app"
-               BlueprintName = "LordyalClip"
+               BlueprintIdentifier = "D7394FF029ED8BBD000C4F78"
+               BuildableName = "Lordyal.app"
+               BlueprintName = "Lordyal"
                ReferencedContainer = "container:Lordyal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,7 +31,6 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=Y2J47GHB4WATG&amp;store_id=1&amp;merchant_id=44&amp;token=ABCDEFG123&amp;points=5"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -44,23 +43,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D739500B29ED8DBD000C4F78"
-            BuildableName = "LordyalClip.app"
-            BlueprintName = "LordyalClip"
+            BlueprintIdentifier = "D7394FF029ED8BBD000C4F78"
+            BuildableName = "Lordyal.app"
+            BlueprintName = "Lordyal"
             ReferencedContainer = "container:Lordyal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "_XCAppClipURL"
-            value = "https://api-dev.taperk.com?order_id=Y2J47GHB4WATG&amp;store_id=1&amp;merchant_id=44&amp;token=ABCDEFG123&amp;points=5"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
-      appClipInvocationURLString = "https://api-dev.taperk.com?order_id=Y2J47GHB4WATG&amp;store_id=1&amp;merchant_id=44&amp;token=ABCDEFG123&amp;points=5"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -69,9 +60,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D739500B29ED8DBD000C4F78"
-            BuildableName = "LordyalClip.app"
-            BlueprintName = "LordyalClip"
+            BlueprintIdentifier = "D7394FF029ED8BBD000C4F78"
+            BuildableName = "Lordyal.app"
+            BlueprintName = "Lordyal"
             ReferencedContainer = "container:Lordyal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
