@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import PhoneNumberKit
+import Combine
 
 struct UserProfileInputView: View {
     @EnvironmentObject var urlModel: InvocationURLModel
@@ -20,6 +21,8 @@ struct UserProfileInputView: View {
     @State var showDatePicker = false
     let rewardModel: RewardModel
     var phoneNumberKit = PhoneNumberKit()
+    private let phoneLimit = 10
+
 
     func testPhone() {
         print(phoneNumberKit.countryCode(for: "VN") ?? 0)
@@ -171,6 +174,16 @@ struct UserProfileInputView: View {
                                         .shadow(color: .gray.opacity(0.3), radius: 10)
                                 }
                                 TextField("Phone number", text: $viewModel.phoneNumber)
+                                    .keyboardType(.numberPad)
+                                    .onReceive(Just(viewModel.phoneNumber)) { newValue in
+                                        let filtered = newValue.filter { "0123456789".contains($0) }
+                                        if filtered != newValue {
+                                            viewModel.phoneNumber = filtered
+                                        }
+                                        if newValue.count > phoneLimit {
+                                            viewModel.phoneNumber = String(newValue.prefix(phoneLimit))
+                                        }
+                                    }
                                     .font(.SemiBold())
                                     .foregroundColor(.boldGreen)
                                 Spacer()

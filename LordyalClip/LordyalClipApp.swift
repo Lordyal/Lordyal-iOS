@@ -11,10 +11,10 @@ import SwiftUI
 struct LordyalClipApp: App {
     init() {
         /* FOR TESTING */
-//        UserDefaultsManager.userID = nil 
-        UserDefaultsManager.shared.set("317", forKey: UserDefaultsManager.Keys.userID)
+//        UserDefaultsManager.userID = nil
+        UserDefaultsManager.shared.set(UIDevice.current.identifierForVendor!.uuidString, forKey: UserDefaultsManager.Keys.userID)
         UserDefaultsManager.userProfile = nil
-        
+
         AuthManager.shared.initApp()
     }
     

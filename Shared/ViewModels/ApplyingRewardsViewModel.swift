@@ -106,7 +106,7 @@ struct ApplyingRewardItemModel: Identifiable, Hashable {
     }
 
     var isClaimable: Bool {
-        collectedPoints == totalPoint
+        collectedPoints >= totalPoint
     }
 
     func toRewardModel() -> RewardModel {
@@ -294,7 +294,7 @@ struct RewardModel {
     var endAt: String
 
     var isClaimable: Bool {
-        points == totalPoints
+        points >= totalPoints
     }
     
     func redeemReward(merchantID: String, storeID: String) {

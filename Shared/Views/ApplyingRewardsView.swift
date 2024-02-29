@@ -42,12 +42,13 @@ struct ApplyingRewardsView: View {
                                 LazyVGrid(columns: twoColumnsLayout) {
                                     ForEach(viewModel.items, id: \.self) { item in
                                         ApplyingRewardItemView(model: item)
-                                            .frame(height: 210)
+                                            .frame(height: 200)
                                             .onTapGesture {
                                                 print(item)
                                                 viewModel.selectItem(item: item)
                                             }
                                     }
+                                    .contentShape(Rectangle())
                                 }
                                 .padding(.horizontal, 20)
                             }

@@ -27,27 +27,28 @@ struct AvailableRewardsView: View {
                             .font(.Bold())
                             .foregroundColor(.boldGreen)
                             .frame(maxWidth: width - 80, alignment: .leading)
-                            .padding(.bottom, 5)
+                            .padding(.bottom, 30)
                         if isLoading {
                             ProgressView()
                                 .tint(.boldGreen)
                         } else {
-                            ForEach(viewModel.items) { item in
-                                AvailableRewardCardView(model: item)
-                                    .onTapGesture {
-                                        presentationMode.wrappedValue.dismiss()
-                                        reward = item.toRewardModel()
-                                    }
-                                    .frame(height: 100)
-                            }
-                            .padding(.bottom, 2)
+                                ForEach(viewModel.items) { item in
+                                    AvailableRewardCardView(model: item)
+                                        .onTapGesture {
+                                            presentationMode.wrappedValue.dismiss()
+                                            reward = item.toRewardModel()
+                                        }
+                                        .frame(height: 100)
+                                }
+                                .padding(.bottom, 5)
+
                             Text("Comeback to \(urlModel.storeName) to get more rewards!")
                                 .font(.SemiBold())
                                 .foregroundColor(.boldGreen)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
                                 .frame(maxWidth: width - 80)
-                                .padding(.top, 3)
+                                .padding(.top, 30)
                         }
                     }
                 }
